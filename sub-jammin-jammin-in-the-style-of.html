@@ -1,0 +1,137 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-jammin-jammin-in-the-style-of">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_jammin.js"></script>
+  <link rel="stylesheet" href="css/style_jammin.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnJammin"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnJammin"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnJammin"></div></div>
+  <div class="infobtnholder"><div class="infobtnJammin"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnJammin"></div></div>
+  <div class="menubtnholder"><div class="menubtnJammin"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Jammin' in the Style Of...</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navJammin-content">
+			<p>There are some styles where people expect to have improvised jams, such as jazz music.  Then there are others, such as classical music, where jamming isnt as common  but this doesnt prevent a classical musician jamming on a contemporary piece.  Musicians can jam in all sorts of styles of music! Some even combine different styles in their jams to make new and interesting types of music.</p>
+
+			<p>So what makes one style different from another?  The short answer is rhythm - the length of time each beat and note is played for.  Different rhythms will make listeners and musicians feel different sorts of energy and emotion, and they help separate one style from another.</p>
+
+			<p>Lets explore a few important styles of music, and discover where you might find the styles used by people when jamming.</p>
+      </div>
+        
+      <div class="navbtn1">
+        <p><a href="sub-jammin-jammin-in-the-style-of-jazz.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jammin_In_The_Style_Of/Jazz.png"></a></p>
+      </div>
+      <div class="navbtn2">
+        <p><a href="sub-jammin-jammin-in-the-style-of-classical.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jammin_In_The_Style_Of/Classical.png"></a></p>
+      </div>
+      <div class="navbtn3">
+        <p><a href="sub-jammin-jammin-in-the-style-of-rock.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jammin_In_The_Style_Of/Rock.png"></a></p>
+      </div>
+      <div class="navbtn4">
+        <p><a href="sub-jammin-jammin-in-the-style-of-latin.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jammin_In_The_Style_Of/Latin.png"></a></p>
+      </div>
+        
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Art_And_Music/bottomhomeam.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnJammin" id="playstopJamminInTheStyleOf"></div></div>
+    <div class="bJammin"><div class="rwJammin" id="JamminInTheStyleOfaudiobbtn"></div></div>
+    <div class="plJammin"><div class="plpsJammin" id="JamminInTheStyleOfaudioplbtn"></div></div>
+    <div class="fJammin"><div class="fwJammin" id="JamminInTheStyleOfaudiofbtn"></div></div>
+    <div id="actualaudio-JamminInTheStyleOf" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-JamminInTheStyleOf').html('<audio id="JamminInTheStyleOfaudio" controls preload onpause="playsJammin()" onplay="pauseJammin()"><source src="audio/Jammin/Jammin_In_The_Style_Of.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-jammin-jammin-in-the-style-of").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundJammin.pause(); bgsoundJammin.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-jammin.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsJammin() {
+         bgsoundJammin.play();
+    }
+       
+    function pauseJammin() {
+         bgsoundJammin.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopJamminInTheStyleOf").on('tap', function() {
+      if(!playing) {
+        JamminInTheStyleOfaudio.play();
+        $('.micbtnJammin').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        JamminInTheStyleOfaudio.pause(); JamminInTheStyleOfaudio.currentTime = 0;
+        $('.micbtnJammin').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#JamminInTheStyleOfaudioplbtn").on('tap', function() {
+      if(!paused) {
+        JamminInTheStyleOfaudio.pause();
+        paused = true;
+      } else {
+        JamminInTheStyleOfaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#JamminInTheStyleOfaudiofbtn").on('tap', function() {
+      var ctime = JamminInTheStyleOfaudio.currentTime;
+      JamminInTheStyleOfaudio.currentTime = ctime + 10;
+    });
+    
+    $("#JamminInTheStyleOfaudiobbtn").on('tap', function() {
+      var ctime = JamminInTheStyleOfaudio.currentTime;
+      JamminInTheStyleOfaudio.currentTime = ctime - 10;
+    });
+    
+    $("#Jamminaudiopsbtn").on('tap', function() {
+      JamminInTheStyleOfaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+    
+    $('.navbtn2').on('tap', function() { 
+      nav2Effects(); 
+    });
+    
+    $('.navbtn3').on('tap', function() { 
+      nav3Effects(); 
+    });
+    
+    $('.navbtn4').on('tap', function() { 
+      nav4Effects(); 
+    });
+  </script>
+</div> <!--//home-->

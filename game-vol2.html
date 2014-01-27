@@ -1,0 +1,106 @@
+<!-- i-C-a -->
+<div data-role="page" id="rockquiz">
+    <div data-role="content" style="overflow:hidden !important;">
+        <div style="width:90%;margin:auto;">
+            <div id="question"></div>
+            <div id="gamecharacter"></div>
+            <div id="choice1"></div>
+            <div id="choice1name"></div>
+            <div id="choice2"></div>
+            <div id="choice2name"></div>
+            <div id="rightchoice"></div>
+            <div id="glow"></div>
+        </div>
+        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/bottomhome.png"></a></div>
+    </div>    
+    <div id="gamedialog">
+        <div id="gamedialog-content">
+            <div id="dialogtitle"></div>
+            <div id="dialogbody"></div>
+        </div>
+    </div>
+    <script>
+        
+        var currentIndex = 0;
+        var isBusy = false;
+        var answer = 0;
+        
+        var choices = new Array(10);
+        choices[0] = new Array(4);
+        choices[0][0] = "Pumice";
+        choices[0][1] = "Basalt (Chilled Lava)";
+        
+        var answers = new Array(10);
+        answers[0] = 1;
+        
+        $(document).ready(function() { 
+            $('#question').show();
+            $('#glow').hide();
+            $('#gamedialog').hide();
+            $('#rightchoice').hide();
+            $('#choice1name').text(choices[currentIndex][0]);
+            $('#choice2name').text(choices[currentIndex][1]);
+            
+            $('#choice1').click(function() {                
+                answer = 1;
+                checkAnswer(currentIndex, answer);
+            });
+
+            $('#choice2').click(function() {
+                answer = 2;
+                checkAnswer(currentIndex, answer);
+            });
+            
+            $('#gamedialog').click(function() {
+                $('#rightchoice').hide();
+                $('#gamedialog').hide();
+            });
+        });
+        
+        function checkAnswer(indexNo, a) {            
+            $('#question').hide();
+            $("#gamedialog").dialog({
+                autoOpen: false,
+                height: 360,
+                width: 300,
+                modal: true
+            });
+
+            if (a == answers[indexNo]) {                
+                var mpointEarned = 1;
+                if (a == 1) {
+                    $('#rightchoice').addClass("pumice-img");
+                    $('#glow').css("top","460px");
+                    $('#glow').css("left","90px");
+                } else {
+                    $('#rightchoice').addClass("basalt-img");
+                    $('#glow').css("top","420px");
+                    $('#glow').css("left","690px");
+                }
+                $('#glow').show();
+                $('#rightchoice').show();            
+                $('#dialogtitle').text("CONGRATULATIONS");
+                $('#dialogbody').html("THAT IS THE CORRECT ANSWER.<br/>YOU HAVE EARNED [" + mpointEarned + "] MPOINTS");
+                $('#gamedialog').show();
+            } else {
+                $('#dialogtitle').text("S O R R Y");
+                $('#dialogbody').html("THAT IS INCORRECT.<br/>THE CORRECT ANSWER IS:<br/>"
+                    + choices[indexNo][answers[indexNo] - 1].toUpperCase());
+                $('#gamedialog').show();
+            }
+        }
+        
+        $(function() {
+            $("#rockquiz").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+        });
+        
+        function goBack() {
+            $.mobile.changePage("sub-naturalworld-volcanoes-krackawhata.html", {transition: "slide", reverse: true });
+        }
+    
+        $('.homelinkbh').on('tap', function() { 
+            mainaudiobg.play(); sciencesoundbg.pause(); sciencesoundbg.currentTime = 0; 
+        });
+        
+    </script>
+</div>

@@ -1,0 +1,130 @@
+<!-- i-C-a -->
+<div data-role="page" id="eruptiongame">
+    <div data-role="content" style="overflow:hidden !important;">
+        <div style="width:90%;margin:auto;">
+            <div id="caption">
+                Put these volcanic eruptions in order from smallest and largest
+            </div>
+            <div id="choice1"></div>
+            <div id="choice2"></div>
+            <div id="choice3"></div>
+            <div id="choice4"></div>
+            <div id="answer1" class="answerframe"></div>
+            <div id="answer2" class="answerframe"></div>
+            <div id="answer3" class="answerframe"></div>
+            <div id="answer4" class="answerframe"></div>
+            <a id="back" href="javascript: void(0)"></a>
+            <div id="facesad"></div>
+        </div>
+        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/bottomhome.png"></a></div>
+    </div> 
+    <div class="dialogOverlay"></div>
+    <div id="correct-dialog">
+        <a id="correct-dialog-points">1</a>
+    </div>
+    <div id="incorrect-dialog">
+        <a id="incorrect-dialog-retry">(RETRY)</a>
+        <a id="incorrect-dialog-cancel">(CANCEL)</a>
+    </div>    
+    <script>
+        
+        var answersCount = 0;
+
+        var correctAnswers = Array(4);
+        correctAnswers[0] = 4;
+        correctAnswers[1] = 2;
+        correctAnswers[2] = 3;
+        correctAnswers[3] = 1;
+
+        var answers = Array(4);
+        answers[0] = 0;
+        answers[1] = 0;
+        answers[2] = 0;
+        answers[3] = 0;
+
+        $(document).ready(function() {
+            $('.dialogOverlay').hide();
+            $('#correct-dialog').hide();
+            $('#incorrect-dialog').hide();            
+            $('#facehappy').hide();            
+            $('#facesad').hide();            
+
+            $("[id^='choice']").mobiledraganddrop({ targets: "#answer1, #answer2, #answer3, #answer4",
+                dragCallback: function() {
+                },
+                dropCallback: function(id, currentDragId) {
+                    if (answersCount < 4) {
+                        var n = parseInt(id.substring(id.length-1));
+                        var m = parseInt(currentDragId.substring(currentDragId.length-1));                    
+                    
+                        answers[n - 1] = m; 
+                        $(id).css("background-image", $(currentDragId).css("background-image"));                    
+                        $(currentDragId).hide();
+                        answersCount = answersCount + 1;                    
+                        if (answersCount == 4) {
+                            var correctCount = 0;
+                            for (var i = 0; i < 4; i++) {
+                                if (answers[i]==correctAnswers[i]) {
+                                    correctCount = correctCount + 1;
+                                }
+                            }
+                            if (correctCount == 4) {
+                                $('.dialogOverlay').show();
+                                $('#correct-dialog').show();
+                                $('#facehappy').show();
+                            } else {
+                                $('.dialogOverlay').show();
+                                $('#incorrect-dialog').show();
+                                $('#facesad').show();
+                            }
+                        }
+                    }
+                }
+            });
+            
+            $('#correct-dialog').click(function() {
+                $('.dialogOverlay').hide();
+                $('#correct-dialog').hide();
+                $('#incorrect-dialog').hide();
+                $('#facehappy').hide();            
+                $('#facesad').hide();            
+            });            
+            $('#incorrect-dialog-retry').click(function() {                
+                $('.dialogOverlay').hide();
+                $('#correct-dialog').hide();
+                $('#incorrect-dialog').hide();             
+                $('#facehappy').hide();            
+                $('#facesad').hide();            
+                
+                answersCount = 0;
+                answers[0] = 0;
+                answers[1] = 0;
+                answers[2] = 0;
+                answers[3] = 0;
+                
+                $("#choice1, #choice2, #choice3, #choice4").show();
+                $("#answer1, #answer2, #answer3, #answer4").attr("style","").addClass("answerframe").show();
+            });
+            $('#incorrect-dialog-cancel').click(function() {
+                $('.dialogOverlay').hide();
+                $('#correct-dialog').hide();
+                $('#incorrect-dialog').hide();
+                $('#facehappy').hide();            
+                $('#facesad').hide();            
+            });
+
+            $('#back').click(function() {
+                goBack();
+            });            
+        });
+        
+        function goBack() {
+            $.mobile.changePage("sub-naturalworld-volcanoes-poisoncloud.html", {transition: "slide", reverse: true });
+        }
+    
+        $('.homelinkbh').on('tap', function() { 
+            mainaudiobg.play(); sciencesoundbg.pause(); sciencesoundbg.currentTime = 0; 
+        });
+        
+    </script>
+</div>

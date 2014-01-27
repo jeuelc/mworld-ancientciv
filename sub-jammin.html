@@ -1,0 +1,142 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-jammin">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_jammin.js"></script>
+  <link rel="stylesheet" href="css/style_jammin.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnJammin"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnJammin"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnJammin"></div></div>
+  <div class="infobtnholder"><div class="infobtnJammin"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnJammin"></div></div>
+  <div class="menubtnholder"><div class="menubtnJammin"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Jammin'</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navJammin-content">
+		<p>When bands and musicians play music, they might practise and perform songs that are already written.  But sometimes, musicians like to make up music just for the fun of it.  So, they jam!</p>
+
+		<p>'Jamming' is when musicians come together to play music that hasnt been prepared, arranged or written yet. Its a fun way to play and make up new music with other people, and can also be a great way to practise an instrument.</p>
+
+		<p>Jamming is for everyone too - not just advanced musicians.  Anyone who can make sound with an instrument, their voice, or just something to hit can jam.  You can jam without reading music or even knowing any songs.  All you need is a few ideas, some tools, your ears, and someone to jam with.</p>
+
+		<p>Let's explore how people jam, and learn some tools that you can use to jam with your friends!</p>
+      </div>
+        
+      <div class="navbtn1">
+        <p><a href="sub-jammin-whats-your-jam.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Whats_Your_Jam.png"></a></p>
+      </div>
+      <div class="navbtn2">
+        <p><a href="sub-jammin-jammin-in-the-style-of.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jammin_In_The_Style_Of.png"></a></p>
+      </div>
+      <div class="navbtn3">
+        <p><a href="sub-jammin-jammin-tools.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jammin_Tools.png"></a></p>
+      </div>
+      <div class="navbtn4">
+        <p><a href="sub-jammin-jam-session.html" data-transition="slide"><img src="css/images/9-12/Art_And_Music/Jammin/Jam_Session.png"></a></p>
+      </div>
+        
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Art_And_Music/bottomhomeam.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnJammin" id="playstopJammin"></div></div>
+    <div class="bJammin"><div class="rwJammin" id="Jamminaudiobbtn"></div></div>
+    <div class="plJammin"><div class="plpsJammin" id="Jamminaudioplbtn"></div></div>
+    <div class="fJammin"><div class="fwJammin" id="Jamminaudiofbtn"></div></div>
+    <div id="actualaudio-Jammin" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-Jammin').html('<audio id="Jamminaudio" controls preload onpause="playsJammin()" onplay="pauseJammin()"><source src="audio/Jammin/Jammin.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-jammin").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundJammin.pause(); bgsoundJammin.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-artmusic.html", {transition: "slide", reverse: true });
+      bgsoundJammin.pause(); 
+      bgsoundJammin.currentTime = 0;
+      artmusicsoundbg.play();
+    }
+    
+    function playsJammin() {
+         bgsoundJammin.play();
+    }
+       
+    function pauseJammin() {
+         bgsoundJammin.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopJammin").on('tap', function() {
+      if(!playing) {
+        Jamminaudio.play();
+        $('.micbtnJammin').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        Jamminaudio.pause(); Jamminaudio.currentTime = 0;
+        $('.micbtnJammin').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#Jamminaudioplbtn").on('tap', function() {
+      if(!paused) {
+        Jamminaudio.pause();
+        paused = true;
+      } else {
+        Jamminaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#Jamminaudiofbtn").on('tap', function() {
+      var ctime = Jamminaudio.currentTime;
+      Jamminaudio.currentTime = ctime + 10;
+    });
+    
+    $("#Jamminaudiobbtn").on('tap', function() {
+      var ctime = Jamminaudio.currentTime;
+      Jamminaudio.currentTime = ctime - 10;
+    });
+    
+    $("#Jamminaudiopsbtn").on('tap', function() {
+      Jamminaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+    
+    $('.navbtn2').on('tap', function() { 
+      nav2Effects(); 
+    });
+    
+    $('.navbtn3').on('tap', function() { 
+      nav3Effects(); 
+    });
+    
+    $('.navbtn4').on('tap', function() { 
+      nav4Effects(); 
+    });
+  </script>
+</div> <!--//home-->

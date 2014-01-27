@@ -1,0 +1,292 @@
+/* Main common basic pages */
+#sub-rome, #sub-rome-republic-and-the-roman-character, #sub-rome-early-rome {
+  background:url('images/9-12/Ancient_Civilizations/Rome/Rome_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style */
+#sub-rome-early-rome-myth-of-romulus-and-remus{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Early_Rome/Myth_Of_Romulus_And_Remus/Myth_Of_Romulus_And_Remus_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/Rome_The_Italians_And_The_Greeks/Rome_The_Italians_And_The_Greeks_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+.plRome, .psRome, .bRome, .fRome {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.micbtnRome {
+  background:url('images/9-12/Ancient_Civilizations/micac.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rwRome {
+  background:url('images/9-12/Ancient_Civilizations/rwac.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpsRome {
+  background:url('images/9-12/Ancient_Civilizations/playac.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fwRome {
+  background:url('images/9-12/Ancient_Civilizations/fwac.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtnRome {
+  background:url('images/9-12/Ancient_Civilizations/menuac.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtnRome {
+  background:url('images/9-12/Ancient_Civilizations/mapac.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtnRome {
+  background:url('images/9-12/Ancient_Civilizations/mpointsac.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtnRome {
+  background:url('images/9-12/Ancient_Civilizations/ctrlpnlac.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtnRome {
+  background:url('images/9-12/Ancient_Civilizations/infoac.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtnRome {
+  background:url('images/9-12/Ancient_Civilizations/creditsac.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+/* Common Button Design Ends Here */
+
+
+.navRome-content {
+	position: absolute;
+	left: 305px;
+	top: 275px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Some pages needs different style for text content */
+.navRome-looingup {
+	position: absolute;
+	left: 305px;
+	top: 346px;
+	width: 410px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navRomebtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.navRomebtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.navRomebtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}
+
+			
+/**********flipcard effect**************/
+#f3_container,#f4_container,#f5_container  {
+  position: relative;
+  width: 360px;
+  height: 280px;
+  z-index: 1;
+}
+#f3_container,#f4_container,#f5_container {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+#f3_card,#f4_card,#f5_card{
+  width: 360px;
+  height: 280px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: all 1.0s linear;
+  -o-transform-style: preserve-3d;
+  -o-transition: all 1.0s linear;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+/* Common Header Div Design */
+#sub-rome .bptitleholder, #sub-rome-republic-and-the-roman-character .bptitleholder, #sub-rome-early-rome .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+/* Custom Header Div Design */
+#sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+#sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+}
+/* Common Header Design h1 */
+#sub-rome .bptitleholder h1, #sub-rome-republic-and-the-roman-character .bptitleholder h1, #sub-rome-early-rome .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/* Custom Page Header Design h1 */
+#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+
+
+.bpcontentRome{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+
+
+.navRome-content3{
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+
+
+/* Custom content */
+
+
+
+.navRome-MythOfRomulusAndRemus{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+.actualaudio-RomeTheItaliansAndTheGreeks{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navRome-SongStyleShowcase{
+	position: absolute;
+	left: 298px;
+	top: 163px;
+	width: 426px;
+	height: 417px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}

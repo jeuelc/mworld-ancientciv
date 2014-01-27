@@ -1,0 +1,506 @@
+/* Main common basic pages */
+#sub-megacities, #sub-megacities-daily-life-megacity-mayors,#sub-megacities-daily-life-the-life-of-a-bcak-driver,#sub-megacities-daily-life-megacity-mayors-water,#sub-megacities-the-future-cable-car-in-rio-de-janeiro,#sub-megacities-the-future-floating-school-in-lagos,#sub-megacities-the-future-growing-food-in-the-city,#sub-megacities-the-future-here-to-stay,#sub-megacities-what-are-megacities-case-study-sao-paulo,#sub-megacities-what-are-megacities-how-fast-do-they-grow,#sub-megacities-what-are-megacities-what-do-they-look-like,#sub-megacities-what-are-megacities-whats-life-like-in-a-megacity,#sub-megacities-what-are-megacities-where-are-megacities,#sub-megacities-why-do-we-have-them, #sub-megacities-why-do-we-have-them-rich-and-poor-megacities{
+  background:url('images/9-12/The_Modern_World/Megacities/Megacities_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style */
+#sub-megacities-daily-life{
+  background:url('images/9-12/The_Modern_World/Megacities/Daily_Life/Daily_Life_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-megacities-the-future{
+  background:url('images/9-12/The_Modern_World/Megacities/The_Future/The_Future_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-megacities-what-are-megacities{
+  background:url('images/9-12/The_Modern_World/Megacities/What_Are_Megacities/What_Are_Megacities_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-megacities-daily-life-kid-deepak{
+  background:url('images/9-12/The_Modern_World/Megacities/Daily_Life/Kid_Deepak/Kid_Deepak_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-megacities-daily-life-kid-minsuh{
+  background:url('images/9-12/The_Modern_World/Megacities/Daily_Life/Kid_Minsuh/Kid_Minsuh_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style Ends here */
+
+/* Common Button Design */
+.plMegacities, .psMegacities, .bMegacities, .fMegacities {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.micbtnMegacities {
+  background:url('images/9-12/The_Modern_World/micmw.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rwMegacities {
+  background:url('images/9-12/The_Modern_World/rwmw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpsMegacities {
+  background:url('images/9-12/The_Modern_World/playmw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fwMegacities {
+  background:url('images/9-12/The_Modern_World/fwmw.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtnMegacities {
+  background:url('images/9-12/The_Modern_World/menumw.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtnMegacities {
+  background:url('images/9-12/The_Modern_World/mapmw.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtnMegacities {
+  background:url('images/9-12/The_Modern_World/mpointsmw.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtnMegacities {
+  background:url('images/9-12/The_Modern_World/ctrlpnlmw.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtnMegacities {
+  background:url('images/9-12/The_Modern_World/infomw.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtnMegacities {
+  background:url('images/9-12/The_Modern_World/creditsmw.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+/* Common Button Design Ends Here */
+
+
+.navMegacities-content {
+	position: absolute;
+	left: 305px;
+	top: 275px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Some pages needs different style for text content */
+.navMegacities-looingup {
+	position: absolute;
+	left: 305px;
+	top: 346px;
+	width: 410px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+
+.navMegacitiesbtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.navMegacitiesbtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.navMegacitiesbtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}
+
+/* custom page clickable divs */
+		.meet_deepak{
+			height: 90px;
+			width: 257px;
+			top: 335px;
+			position: absolute;
+			left: 84px;
+		}
+		.megacity_mayors{
+			height: 90px;
+			width: 215px;
+			top: 419px;
+			position: absolute;
+			left: 285px;			
+		}
+		.becak_driver{
+			height: 58px;
+			width: 165px;
+			top: 230px;
+			position: absolute;
+			left: 505px;		
+		}
+		.meet_minsuh{
+			height: 90px;
+			width: 225px;
+			top: 385px;
+			position: absolute;
+			left: 725px;
+		
+		}
+		
+		.here_to_stay{
+			height: 350px;
+			width: 236px;
+			top: 320px;
+			position: absolute;
+			left: 37px;
+		}
+		.growing_city{
+			height: 350px;
+			width: 236px;
+			top: 320px;
+			position: absolute;
+			left: 272px;
+		}
+		.floating_school{
+			height: 350px;
+			width: 236px;
+			top: 320px;
+			position: absolute;
+			left: 506px;
+		}
+		.cable_car{
+			height: 350px;
+			width: 236px;
+			top: 320px;
+			position: absolute;
+			left: 742px;
+		}			
+/* custom page clickable divs ends here */
+
+/* Common Header Div Design */
+#sub-megacities .bptitleholder, #sub-megacities-daily-life-megacity-mayors .bptitleholder, #sub-megacities-daily-life-the-life-of-a-bcak-driver .bptitleholder,#sub-megacities-daily-life-megacity-mayors-water .bptitleholder, #sub-megacities-the-future-cable-car-in-rio-de-janeiro .bptitleholder,#sub-megacities-the-future-floating-school-in-lagos .bptitleholder,#sub-megacities-the-future-growing-food-in-the-city .bptitleholder,#sub-megacities-the-future-here-to-stay .bptitleholder,#sub-megacities-what-are-megacities-case-study-sao-paulo .bptitleholder,#sub-megacities-what-are-megacities-how-fast-do-they-grow .bptitleholder, #sub-megacities-what-are-megacities-what-do-they-look-like .bptitleholder,#sub-megacities-what-are-megacities-whats-life-like-in-a-megacity .bptitleholder,#sub-megacities-what-are-megacities-where-are-megacities .bptitleholder,#sub-megacities-why-do-we-have-them .bptitleholder,#sub-megacities-why-do-we-have-them-rich-and-poor-megacities .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+/* Custom Header Div Design */
+#sub-megacities-daily-life .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 281px;
+}
+#sub-megacities-the-future .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 20px;
+	left: 281px;
+}
+
+#sub-megacities-what-are-megacities .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+#sub-megacities-daily-life-kid-deepak .bptitleholder{
+	width: 490px;
+	height: 113px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 0px;
+	left: 378px;
+}
+#sub-megacities-daily-life-kid-minsuh .bptitleholder{
+	width: 490px;
+	height: 113px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 0px;
+	left: 145px;
+}
+
+
+/* Common Header Design h1 */
+#sub-megacities .bptitleholder h1,#sub-megacities-daily-life-megacity-mayors .bptitleholder h1,#sub-megacities-daily-life-the-life-of-a-bcak-driver .bptitleholder h1,#sub-megacities-daily-life-megacity-mayors-water .bptitleholder h1,#sub-megacities-the-future-cable-car-in-rio-de-janeiro .bptitleholder h1,#sub-megacities-the-future-floating-school-in-lagos .bptitleholder h1,#sub-megacities-the-future-growing-food-in-the-city .bptitleholder h1,#sub-megacities-the-future-here-to-stay .bptitleholder h1,#sub-megacities-what-are-megacities-case-study-sao-paulo .bptitleholder h1,#sub-megacities-what-are-megacities-how-fast-do-they-grow .bptitleholder h1,#sub-megacities-what-are-megacities-what-do-they-look-like .bptitleholder h1,#sub-megacities-what-are-megacities-whats-life-like-in-a-megacity .bptitleholder h1,#sub-megacities-what-are-megacities-where-are-megacities .bptitleholder h1,#sub-megacities-why-do-we-have-them .bptitleholder h1,#sub-megacities-why-do-we-have-them-rich-and-poor-megacities .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/* Custom Page Header Design h1 */
+#sub-megacities-daily-life .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-megacities-the-future .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-megacities-what-are-megacities .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-megacities-daily-life-kid-deepak .bptitleholder h3{
+	text-transform: uppercase;
+	color: #2f36ad!important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sub-megacities-daily-life-kid-minsuh .bptitleholder h3{
+	text-transform: uppercase;
+	color: #2f36ad!important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+#sub-megacities-daily-life-kid-deepak .bptitleholder h1{
+	text-transform: uppercase;
+	color: #2f36ad!important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+#sub-megacities-daily-life-kid-minsuh .bptitleholder h1{
+	text-transform: uppercase;
+	color: #2f36ad!important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+
+.bpcontentMegacities{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+.bpcontent_messing_body_clock {
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	height: 356px;
+	margin-left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	width: 94%;
+}
+
+.navMegacities-content3{
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+.navevolutionandnaturalselectionbtn1{
+	position: absolute;
+	left: 134px;
+}
+.navevolutionandnaturalselectionbtn2{
+	position: absolute;
+	left: 394px;
+}
+.navevolutionandnaturalselectionbtn3{
+	position: absolute;
+	left: 657px;
+}
+
+/* Custom content */
+.navMegacities-dailylife{
+	position: absolute;
+	left: 22px;
+	top: 50px;
+	width: 975px;
+	height: 379px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.navMegacities-thefuture{
+	position: absolute;
+	left: 22px;
+	top: 66px;
+	width: 975px;
+	height: 379px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navMegacities-whataremegacities{
+	position: absolute;
+	left: 22px;
+	top: 66px;
+	width: 487px;
+	height: 345px;
+	overflow: auto;
+	text-align: justify;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+	padding-right: 5px;
+}
+.navMegacities-KidDeepak{
+position: absolute;
+left: 324px;
+top: 115px;
+width: 665px;
+height: 410px;
+overflow: auto;
+text-align: justify;
+font-family: comic sans ms;
+font-size: 18px;
+font-weight: normal;
+color: #000000;
+padding-right: 5px;
+}
+.kid_deepak-first,.kid_deepak-second,.kid_deepak-third{
+	text-align:center;
+	margin:10px 0px 10px 0px;
+}
+.kid_deepak-third{
+margin-left: 185px;
+}
+.kid_deepak-second p,.kid_deepak-third p{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.navMegacities-KidMinsuh{
+	position: absolute;
+	left: 41px;
+	top: 115px;
+	width: 665px;
+	height: 443px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	padding-right: 5px;
+}
+.kid_minsuh-first,.kid_minsuh-second,.kid_minsuh-third{
+	text-align:center;
+	margin:10px 0px 10px 0px;
+}
+.kid_minsuh-first{
+	width: 538px;
+}
+.kid_minsuh-second{
+	margin-right: 70px;
+}
+.kid_minsuh-third{
+	width: 583px;
+}
+
+.kid_minsuh-second p,.kid_minsuh-third p{
+	margin:0;
+	padding:0;
+	text-align:center;
+}

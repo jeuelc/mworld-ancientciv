@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-rome-early-rome-myth-of-romulus-and-remus">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_rome.js"></script>
+  <link rel="stylesheet" href="css/style_rome.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnRome"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnRome"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnRome"></div></div>
+  <div class="infobtnholder"><div class="infobtnRome"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
+  <div class="menubtnholder"><div class="menubtnRome"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Myth of Romulus and Remus</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navRome-MythOfRomulusAndRemus">
+        <p>According to legend, reported by the historian Livy in his book Ab Urbe Condita (meaning From the Foundation of the City), the story of Rome starts in the nearby city of Alba Longa.  The kingdom of Alba Longa was ruled by Amulius.  Amulius fought his brother, Numitor, and sent him into exile.  Amulius also forced Numitor's daughter, Rhea Silvia, to become a <a href="#Vestal_Virgin" data-rel="popup">Vestal Virgin</a>.  </p>
+
+		<p>Vestal Virgins were not allowed to marry and have children.  Rhea Silvia, however, became pregnant with twins from the god Mars (the god of war), and Numitor ordered that the babies be thrown into the river Tiber.  Thankfully, a she-wolf saved the babies and raised them.  Although later the twins were reunited with their grandfather Numitor in Alba Longa, they decided to go back to the area of Rome and built cities there.  Soon, however, ambition got the better of the two brothers and they fought viciously until Romulus killed Remus.  Rome was named after its sole ruler.  Its foundation is dated to 753 BCE.</p>
+
+      </div>
+    </div> <!-- end content -->  
+ 	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="Vestal_Virgin" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Vestal Virgin</p>
+			<p>A Vestal Virgin was a priestess who was like a present day Nun.</p>
+		</div>
+    </div>
+	<!---------------------------------------------------------------------------------------- -->   
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopMythOfRomulusAndRemus"></div></div>
+    <div class="bRome"><div class="rwRome" id="MythOfRomulusAndRemusaudiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="MythOfRomulusAndRemusaudioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="MythOfRomulusAndRemusaudiofbtn"></div></div>
+    <div id="actualaudio-MythOfRomulusAndRemus" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-MythOfRomulusAndRemus').html('<audio id="MythOfRomulusAndRemusaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Myth_Of_Romulus_And_Remus.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-rome-early-rome-myth-of-romulus-and-remus").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-rome-early-rome.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsRome() {
+         bgsoundRome.play();
+    }
+       
+    function pauseRome() {
+         bgsoundRome.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopMythOfRomulusAndRemus").on('tap', function() {
+      if(!playing) {
+        MythOfRomulusAndRemusaudio.play();
+        $('.micbtnRome').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        MythOfRomulusAndRemusaudio.pause(); MythOfRomulusAndRemusaudio.currentTime = 0;
+        $('.micbtnRome').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#MythOfRomulusAndRemusaudioplbtn").on('tap', function() {
+      if(!paused) {
+        MythOfRomulusAndRemusaudio.pause();
+        paused = true;
+      } else {
+        MythOfRomulusAndRemusaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#MythOfRomulusAndRemusaudiofbtn").on('tap', function() {
+      var ctime = MythOfRomulusAndRemusaudio.currentTime;
+      MythOfRomulusAndRemusaudio.currentTime = ctime + 10;
+    });
+    
+    $("#MythOfRomulusAndRemusaudiobbtn").on('tap', function() {
+      var ctime = MythOfRomulusAndRemusaudio.currentTime;
+      MythOfRomulusAndRemusaudio.currentTime = ctime - 10;
+    });
+    
+    $("#MythOfRomulusAndRemusaudiopsbtn").on('tap', function() {
+      MythOfRomulusAndRemusaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div> <!--//home-->

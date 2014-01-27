@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-rome-rome-carthage-and-civil-war">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_rome.js"></script>
+  <link rel="stylesheet" href="css/style_rome.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnRome"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnRome"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnRome"></div></div>
+  <div class="infobtnholder"><div class="infobtnRome"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
+  <div class="menubtnholder"><div class="menubtnRome"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Rome, Carthage and Civil War</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navRome-RomeCarthageAndCivilWar">
+        <p>The greatest naval power of the Mediterranean in the third century BCE was Carthage, near modern-day Tunis.  The people of Carthage were originally Phoenicians and they founded Carthage, meaning 'New City', in the ninth century BCE.  Carthage controlled the western half of Sicily.  When the Greek city of Messana revolted against the Carthaginians, the Romans intervened and the first <a href="#Punic_War" data-rel="popup">Punic War</a> erupted (264-241 BCE).  By the end of the war, Carthage was forced to withdraw from Sicily and to pay heavy reparations to the Romans.  This gave the Romans confidence and in 238 BCE they seized Corsica which was also controlled by the Carthaginians. </p>
+
+		<p>Furious at this, the Carthaginians began to strengthen their presence in Spain.  The Second Punic War (218-202 BC) was at hand.   Enter Hannibal  youve probably heard of him!  He took over the Carthaginian army.  Provoked by the Romans, he headed for Rome, followed by 50,000 Gauls!  But Scipio Africanus attacked Carthage, forcing Hannibal to rush to his hometown in order to defend it. </p> 
+
+		<p>The third Punic War took place from 149-146 BCE when the Carthaginians went to war against the Numidians without Romes approval.  The city was razed to the ground and sown with salt to make its land permanently infertile.</p>
+      </div>
+    </div> <!-- end content -->  
+  	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="Punic_War" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Punic Wars</p>
+			<p>The wars were called the Punic Wars because the Latin word for Phoenicia is Poeni, and the Romans still called the Carthaginians Phoenicians.</p>
+		</div>
+    </div>
+	<!---------------------------------------------------------------------------------------- -->   
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopRomeCarthageAndCivilWar"></div></div>
+    <div class="bRome"><div class="rwRome" id="RomeCarthageAndCivilWaraudiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="RomeCarthageAndCivilWaraudioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="RomeCarthageAndCivilWaraudiofbtn"></div></div>
+    <div id="actualaudio-RomeCarthageAndCivilWar" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-RomeCarthageAndCivilWar').html('<audio id="RomeCarthageAndCivilWaraudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Rome_Carthage_And_Civil_War.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-rome-rome-carthage-and-civil-war").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-rome.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsRome() {
+         bgsoundRome.play();
+    }
+       
+    function pauseRome() {
+         bgsoundRome.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopRomeCarthageAndCivilWar").on('tap', function() {
+      if(!playing) {
+        RomeCarthageAndCivilWaraudio.play();
+        $('.micbtnRome').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        RomeCarthageAndCivilWaraudio.pause(); RomeCarthageAndCivilWaraudio.currentTime = 0;
+        $('.micbtnRome').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#RomeCarthageAndCivilWaraudioplbtn").on('tap', function() {
+      if(!paused) {
+        RomeCarthageAndCivilWaraudio.pause();
+        paused = true;
+      } else {
+        RomeCarthageAndCivilWaraudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#RomeCarthageAndCivilWaraudiofbtn").on('tap', function() {
+      var ctime = RomeCarthageAndCivilWaraudio.currentTime;
+      RomeCarthageAndCivilWaraudio.currentTime = ctime + 10;
+    });
+    
+    $("#RomeCarthageAndCivilWaraudiobbtn").on('tap', function() {
+      var ctime = RomeCarthageAndCivilWaraudio.currentTime;
+      RomeCarthageAndCivilWaraudio.currentTime = ctime - 10;
+    });
+    
+    $("#RomeCarthageAndCivilWaraudiopsbtn").on('tap', function() {
+      RomeCarthageAndCivilWaraudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div> <!--//home-->

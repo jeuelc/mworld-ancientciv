@@ -1,0 +1,444 @@
+/* Main common basic pages */
+#sub-ever-changing-earth, #sub-ever-changing-earth-changing-earth,#sub-ever-changing-earth-earths-endless-evolution,#sub-ever-changing-earth-wipe-out,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas,#sub-ever-changing-earth-geology-layer-upon-layer,#sub-ever-changing-earth-geology-making-an-earth-cake,#sub-ever-changing-earth-geology-never-ending-sediments,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe,#sub-ever-changing-earth-rock-whispering-stick-around-or-go-with-the-flow,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-slushball-earth,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-wheres-the-earth-gone{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Ever_Changing_Earth_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style */
+#sub-ever-changing-earth-fossil-puzzles{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/Fossil_Puzzles_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Fossil_Puzzles/A_Fossils_Tale/Polar_Plants_Of_Pangaea/Polar_Plants_Of_Pangaea_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-ever-changing-earth-fossil-geology{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Geology/Geology_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-ever-changing-earth-rock-whispering{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Rock_Whispering/Rock_Whispering_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-ever-changing-earth-rock-whispering-through-the-lens{
+  background:url('images/9-12/The_Natural_World/Ever_Changing_Earth/Rock_Whispering/Through_The_Lens/Through_The_Lens_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style Ends here */
+
+/* Common Button Design */
+.pleverchangingearth, .pseverchangingearth, .beverchangingearth, .feverchangingearth {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.micbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/micnat.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rweverchangingearth {
+  background:url('images/9-12/The_Natural_World/rwnat.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpseverchangingearth {
+  background:url('images/9-12/The_Natural_World/playnat.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fweverchangingearth {
+  background:url('images/9-12/The_Natural_World/fwnat.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/menunat.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/mapnat.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/mpointsnat.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/ctrlpnlnat.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/infonat.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtneverchangingearth {
+  background:url('images/9-12/The_Natural_World/creditsnat.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+/* Common Button Design Ends Here */
+
+
+.naveverchangingearth-content {
+	position: absolute;
+	left: 305px;
+	top: 275px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Some pages needs different style for text content */
+.naveverchangingearth-looingup {
+	position: absolute;
+	left: 305px;
+	top: 346px;
+	width: 410px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+
+.naveverchangingearthbtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.naveverchangingearthbtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.naveverchangingearthbtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}
+
+	.fossil-puzzles-the_fossil_formula{
+		position: absolute;
+		height: 100px;
+		width: 93px;
+		top: 290px;
+		left: 238px;
+	}
+	.fossil-puzzles-the_language_of_the_past{
+		position: absolute;
+		height: 100px;
+		width: 187px;
+		top: 97px;
+		left: 54px;	
+	
+	
+	
+			
+	}
+	.fossil-puzzles-a_fossils_tale{
+		position: absolute;
+		height: 100px;
+		width: 93px;
+		top: 389px;
+		left: 511px;			
+	}
+	
+	.geology-making_earth_cake{
+		position: absolute;
+		height: 280px;
+		width: 440px;
+		top: 296px;
+		left: 548px;
+	}
+	.geology-layer_upon_layer{
+		position: absolute;
+		height: 50px;
+		width: 325px;
+		top: 471px;
+		left: 85px;	
+	}
+	.geology-never_ending_sediments{
+		position: absolute;
+		height: 55px;
+		width: 354px;
+		top: 592px;
+		left: 315px;	
+	}	
+	.rock-whispering-stick_around	{
+		height:100px;
+		width:100px;
+		position:absolute;
+	}
+	.rock-whispering-stories_written_in_stone	{
+		height:100px;
+		width:100px;
+		left:100px;
+		position:absolute;
+	}
+	.rock-whispering-throught_the_lens{
+		height:100px;
+		width:100px;
+		left:200px;
+		position:absolute;
+	}
+/* Common Header Div Design */
+#sub-ever-changing-earth .bptitleholder, #sub-ever-changing-earth-changing-earth  .bptitleholder,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder,#sub-ever-changing-earth-wipe-out .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder,#sub-ever-changing-earth-rock-whispering-stick-around-or-go-with-the-flow .bptitleholder,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone .bptitleholder,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-slushball-earth .bptitleholder,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-wheres-the-earth-gone .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+/* Custom Header Div Design */
+#sub-ever-changing-earth-fossil-puzzles .bptitleholder{
+	width: 490px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 347px;
+}
+
+#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 194px;
+}
+#sub-ever-changing-earth-fossil-geology .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+#sub-ever-changing-earth-rock-whispering .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+#sub-ever-changing-earth-rock-whispering-through-the-lens .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+
+/* Common Header Design h1 */
+#sub-ever-changing-earth .bptitleholder h1, #sub-ever-changing-earth-changing-earth  .bptitleholder h1,#sub-ever-changing-earth-earths-endless-evolution .bptitleholder h1,#sub-ever-changing-earth-wipe-out .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-language-of-the-past .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-the-fossil-formula .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale .bptitleholder h1,#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-life-on-the-high-seas .bptitleholder h1,#sub-ever-changing-earth-geology-layer-upon-layer .bptitleholder h1,#sub-ever-changing-earth-geology-making-an-earth-cake .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments .bptitleholder h1,#sub-ever-changing-earth-geology-never-ending-sediments-clues-to-catastrophe .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stick-around-or-go-with-the-flow .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-slushball-earth .bptitleholder h1,#sub-ever-changing-earth-rock-whispering-stories-written-in-stone-wheres-the-earth-gone .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/* Custom Page Header Design h1 */
+#sub-ever-changing-earth-fossil-puzzles .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-ever-changing-earth-fossil-puzzles-a-fossils-tale-polar-plants-of-pangaea .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+#sub-ever-changing-earth-fossil-geology .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+#sub-ever-changing-earth-rock-whispering .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+
+#sub-ever-changing-earth-rock-whispering-through-the-lens .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
+}
+.bpcontenteverchangingearth{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+.bpcontent_messing_body_clock {
+	color: #ffffff;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	height: 356px;
+	margin-left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	width: 94%;
+}
+
+.naveverchangingearth-content3{
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+.navevolutionandnaturalselectionbtn1{
+	position: absolute;
+	left: 134px;
+}
+.navevolutionandnaturalselectionbtn2{
+	position: absolute;
+	left: 394px;
+}
+.navevolutionandnaturalselectionbtn3{
+	position: absolute;
+	left: 657px;
+}
+
+/* Custom content */
+.naveverchangingearth-fossilpuzzles{
+	position: absolute;
+	left: 640px;
+	top: 131px;
+	width: 325px;
+	height: 379px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.naveverchangingearth-polarplantsofpangaea{
+	position: absolute;
+	left: 582px;
+	top: 171px;
+	width: 325px;
+	height: 460px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+.naveverchangingearth-geology{
+	position: absolute;
+	left: 25px;
+	top: 55px;
+	width: 694px;
+	height: 460px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.naveverchangingearth-throughthelens{
+	position: absolute;
+	left: 470px;
+	top: 124px;
+	width: 472px;
+	height: 522px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}

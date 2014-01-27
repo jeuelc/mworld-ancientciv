@@ -1,0 +1,482 @@
+/* Main common basic pages */
+#sub-world-beats, #sub-world-beats-from-tribal-beats-to-master-drummers, #sub-world-beats-shake-scrape-and-strike,#sub-world-beats-from-tribal-beats-to-master-drummers-big-noise,#sub-world-beats-from-tribal-beats-to-master-drummers-big-noise, #sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers,#sub-world-beats-from-tribal-beats-to-master-drummers-tribal-beats,#sub-world-beats-shake-scrape-and-strike-creating-the-beat,#sub-world-beats-shake-scrape-and-strike-the-rolllll-of-drumming, #sub-world-beats-weird-and-wonderful-beatmakers-beatboxing, #sub-world-beats-weird-and-wonderful-beatmakers-gongs, #sub-world-beats-weird-and-wonderful-beatmakers-lion-drums, #sub-world-beats-weird-and-wonderful-beatmakers-taiko, #sub-world-beats-weird-and-wonderful-beatmakers-talking-drums{
+  background:url('images/9-12/Art_and_Music/World_Beats/World_Beats_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style */
+#sub-world-beats-from-tribal-beats-to-master-drummers-big-noise-indonesian-gamelan {
+  background:url('images/9-12/Art_and_Music/World_Beats/From_Tribal_Beats_to_Master_Drummers/Big_Noise/Indonesian_Gamelan/Indonesian_Gamelan_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-world-beats-from-tribal-beats-to-master-drummers-electro-beats{
+  background:url('images/9-12/Art_and_Music/World_Beats/From_Tribal_Beats_to_Master_Drummers/Electro_Beats/Electro_Beats_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers-the-tabla{
+  background:url('images/9-12/Art_and_Music/World_Beats/From_Tribal_Beats_to_Master_Drummers/Master_Drummers/The_Tabla/Tabla_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers-the-tonbak{
+  background:url('images/9-12/Art_and_Music/World_Beats/From_Tribal_Beats_to_Master_Drummers/Master_Drummers/The_Tonbak/Tonbak_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-world-beats-weird-and-wonderful-beatmakers{
+  background:url('images/9-12/Art_and_Music/World_Beats/Weird_And_Wonderful_Beatmakers/Weird_And_Wonderful_Beatmakers_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-world-beats-from-tribal-beats-to-master-drummers-tribal-beats-west-african-tribal-drumming{
+  background:url('images/9-12/Art_and_Music/World_Beats/From_Tribal_Beats_to_Master_Drummers/Tribal_Beats/West_African_Tribal_Drumming/West_African_Tribal_Drumming_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+
+/* Custom Pages Style Ends here */
+
+/* Common Button Design */
+.plWorldBeats, .psWorldBeats, .bWorldBeats, .fWorldBeats {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.micbtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/micam.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rwWorldBeats {
+  background:url('images/9-12/Art_and_Music/rwam.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpsWorldBeats {
+  background:url('images/9-12/Art_and_Music/playam.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fwWorldBeats {
+  background:url('images/9-12/Art_and_Music/fwam.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/menuam.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/mapam.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/mpointsam.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/ctrlpnlam.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/infoam.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtnWorldBeats {
+  background:url('images/9-12/Art_and_Music/creditsam.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+/* Common Button Design Ends Here */
+
+
+.navWorldBeats-content {
+	position: absolute;
+	left: 305px;
+	top: 275px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Some pages needs different style for text content */
+.navWorldBeats-looingup {
+	position: absolute;
+	left: 305px;
+	top: 346px;
+	width: 410px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navWorldBeats-indonesiangamelan{
+	position: absolute;
+	left: 305px;
+	top: 79px;
+	width: 410px;
+	height: 496px;
+	overflow: auto;
+	text-align: left;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+
+.navWorldBeatsbtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.navWorldBeatsbtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.navWorldBeatsbtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}
+
+			
+
+
+/* Common Header Div Design */
+#sub-world-beats .bptitleholder, #sub-world-beats-from-tribal-beats-to-master-drummers .bptitleholder, #sub-world-beats-shake-scrape-and-strike .bptitleholder, #sub-world-beats-from-tribal-beats-to-master-drummers-big-noise .bptitleholder, #sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers .bptitleholder,#sub-world-beats-from-tribal-beats-to-master-drummers-tribal-beats .bptitleholder,#sub-world-beats-shake-scrape-and-strike-creating-the-beat .bptitleholder,#sub-world-beats-shake-scrape-and-strike-the-rolllll-of-drumming .bptitleholder, #sub-world-beats-weird-and-wonderful-beatmakers-beatboxing .bptitleholder, #sub-world-beats-weird-and-wonderful-beatmakers-gongs .bptitleholder, #sub-world-beats-weird-and-wonderful-beatmakers-lion-drums .bptitleholder, #sub-world-beats-weird-and-wonderful-beatmakers-taiko .bptitleholder, #sub-world-beats-weird-and-wonderful-beatmakers-talking-drums .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+/* Custom Header Div Design */
+#sub-jammin-jammin-in-the-style-of-classical .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 563px;
+}
+#sub-world-beats-from-tribal-beats-to-master-drummers-big-noise-indonesian-gamelan .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 297px;
+}
+
+#sub-world-beats-from-tribal-beats-to-master-drummers-electro-beats .bptitleholder{
+	width: 391px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 52px;
+	left: 20px;
+}
+#sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers-the-tabla .bptitleholder{
+	width: 391px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 52px;
+	left: 306px;
+}
+
+#sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers-the-tonbak .bptitleholder{
+	width: 391px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 52px;
+	left: 306px;
+}
+
+#sub-world-beats-weird-and-wonderful-beatmakers .bptitleholder{
+	width: 391px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 52px;
+	left: 306px;
+}
+
+#sub-world-beats-from-tribal-beats-to-master-drummers-tribal-beats-west-african-tribal-drumming .bptitleholder{
+	width: 654px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 52px;
+	left: 184px;
+}
+
+/* Common Header Design h1 */
+#sub-world-beats .bptitleholder h1,#sub-world-beats-from-tribal-beats-to-master-drummers .bptitleholder h1, #sub-world-beats-shake-scrape-and-strike .bptitleholder h1, #sub-world-beats-from-tribal-beats-to-master-drummers-big-noise .bptitleholder h1, #sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers .bptitleholder h1,#sub-world-beats-from-tribal-beats-to-master-drummers-tribal-beats .bptitleholder h1,#sub-world-beats-shake-scrape-and-strike-creating-the-beat .bptitleholder h1,#sub-world-beats-shake-scrape-and-strike-the-rolllll-of-drumming .bptitleholder h1, #sub-world-beats-weird-and-wonderful-beatmakers-beatboxing .bptitleholder h1, #sub-world-beats-weird-and-wonderful-beatmakers-lion-drums .bptitleholder h1, #sub-world-beats-weird-and-wonderful-beatmakers-taiko .bptitleholder h1, #sub-world-beats-weird-and-wonderful-beatmakers-talking-drums .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/* Custom Page Header Design h1 */
+#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-world-beats-from-tribal-beats-to-master-drummers-big-noise-indonesian-gamelan .bptitleholder h1, #sub-world-beats-from-tribal-beats-to-master-drummers-electro-beats .bptitleholder h1, #sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers-the-tabla .bptitleholder h1, #sub-world-beats-from-tribal-beats-to-master-drummers-master-drummers-the-tonbak .bptitleholder h1,#sub-world-beats-weird-and-wonderful-beatmakers .bptitleholder h1, #sub-world-beats-weird-and-wonderful-beatmakers-gongs .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+#sub-world-beats-from-tribal-beats-to-master-drummers-tribal-beats-west-african-tribal-drumming .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	font-size: 30px;	
+}
+.bpcontentWorldBeats{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+
+
+.navWorldBeats-content3{
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+.navevolutionandnaturalselectionbtn1{
+	position: absolute;
+	left: 134px;
+}
+.navevolutionandnaturalselectionbtn2{
+	position: absolute;
+	left: 394px;
+}
+.navevolutionandnaturalselectionbtn3{
+	position: absolute;
+	left: 657px;
+}
+
+/* Custom content */
+
+
+
+.navWorldBeats-electrobeats{
+	position: absolute;
+	left: 26px;
+	top: 100px;
+	width: 392px;
+	height: 327px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.navWorldBeats-thetabla{
+	position: absolute;
+	left: 318px;
+	top: 100px;
+	width: 392px;
+	height: 392px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.navWorldBeats-thetonbak{
+	position: absolute;
+	left: 318px;
+	top: 100px;
+	width: 392px;
+	height: 392px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+.navWorldBeats-westafricantribaldrumming{
+	position: absolute;
+	left: 344px;
+	top: 120px;
+	width: 392px;
+	height: 392px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+.navWorldBeats-WeiredAndWonderfulBeatmakers{
+	position: absolute;
+	left: 83px;
+	top: 171px;
+	width: 853px;
+	height: 392px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+
+#indo_play_vid{
+	height: 50px;
+	width: 100px;
+	top: 631px;
+	left: 452px;
+	position: absolute;	
+}
+#drum_sampler{
+	height: 242px;
+	width: 202px;
+	top: 440px;
+	left: 66px;
+	position: absolute;	
+}
+#tabla_video_btn{
+	height: 62px;
+	width: 117px;
+	position: absolute;
+	top: 620px;
+	left: 446px;
+}
+
+#tribal_drumming_video_btn{
+	height: 62px;
+	width: 117px;
+	position: absolute;
+	top: 620px;
+	left: 446px;
+}
+
+#tonbak_video_btn{
+	height: 62px;
+	width: 117px;
+	position: absolute;
+	top: 620px;
+	left: 446px;
+}
+		.drum_talk_btn{
+			position: absolute;
+			height: 150px;
+			width: 142px;
+			top: 324px;
+			left: 56px;
+		}
+		.how_huge_btn{
+			position: absolute;
+			height: 147px;
+			width: 148px;
+			top: 439px;
+			left: 263px;
+		}
+		.liondance_btn{
+			position: absolute;
+			height: 147px;
+			width: 148px;
+			top: 328px;
+			left: 419px;	
+		}
+		.hear_the_world_btn{
+			position: absolute;
+			height: 142px;
+			width: 137px;
+			top: 443px;
+			left: 637px;
+		}
+		.drums_with_your_voice_btn{
+			position: absolute;
+			height: 147px;
+			width: 145px;
+			top: 327px;
+			left: 790px;
+		}

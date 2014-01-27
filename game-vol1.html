@@ -1,0 +1,119 @@
+<!-- i-C-a -->
+<div data-role="page" id="notvolcano">
+    <div data-role="content" style="overflow:hidden !important;">
+        <div style="width:90%;margin:auto;">
+            <div id="question"></div>
+            <div id="question-text">WHICH IS <font color="#ff0000">NOT</font> A VOLCANO?</div>
+            <div id="back"></div>
+            <a id="marker1" class="reddotmarker" style="top: 112px; left: 99px"></a>
+            <a id="marker2" class="reddotmarker" style="top: 260px; left: 910px"></a>
+            <a id="marker3" class="reddotmarker" style="top: 240px; left: 250px"></a>
+            <a id="marker4" class="reddotmarker" style="top: 655px; left: 108px"></a>
+            
+            <div id="choice1">
+                <div class="choiceimage choice1-image"></div>
+                <div class="choiceframe"></div>
+                <div class="choicename">C. MONT BLANC (FRANCE)</div>
+            </div>            
+            <div id="choice2">
+                <div class="choiceimage choice2-image"></div>
+                <div class="choiceframe"></div>
+                <div class="choicename">A. MT. FUJI (JAPAN)</div>
+            </div>            
+            <div id="choice3">
+                <div class="choiceimage choice3-image"></div>
+                <div class="choiceframe"></div>
+                <div class="choicename">D. MT. ELBRUS (RUSSIA)</div>
+            </div>            
+            <div id="choice4">
+                <div class="choiceimage choice4-image"></div>
+                <div class="choiceframe"></div>
+                <div class="choicename">B. MT. KILIMANJARO (AFRICA)</div>
+            </div>
+            <div id="correctchoice"></div>
+        </div>
+        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/bottomhome.png"></a></div>
+    </div> 
+    <div class="dialogOverlay"></div>
+    <div id="correct-dialog">
+        <a id="correct-dialog-points">1</a>
+    </div>
+    <div id="incorrect-dialog">
+        <a id="incorrect-dialog-retry">(RETRY)</a>
+        <a id="incorrect-dialog-cancel">(CANCEL)</a>
+    </div>
+    <script>
+        
+        $(document).ready(function() {
+            $('.dialogOverlay').hide();
+            $('#correct-dialog').hide();
+            $('#incorrect-dialog').hide();            
+            
+            $('#choice1').animate({left: "125px"}, 1200);
+            $('#choice2').animate({left: "715px"}, 1200);
+            $('#choice3').animate({left: "300px"}, 1500);
+            $('#choice4').animate({left: "10px"}, 800).delay(1000);
+            $('#correctchoice').hide();
+            
+            $('#choice1').click(function() {
+                $('#correctchoice').hide();
+                $('#correctchoice').css("left", "-1000px");
+                $('#correctchoice').css("width", "400px");
+                
+                $('.dialogOverlay').show();
+                $('#correct-dialog').show();                
+                $('#correctchoice').html($('#choice1').html());
+                $('#correctchoice .choiceframe').css("width", "400px");
+                $('#correctchoice .choiceframe').css("height", "350px");
+                $('#correctchoice .choiceimage').css("width", "380px");
+                $('#correctchoice .choiceimage').css("height", "320px");
+                $('#correctchoice .choicename').css("width", "380px");
+                $('#correctchoice .choicename').css("top", "295px");
+                $('#correctchoice').show();
+                $('#correctchoice').animate({left: "350px"}, 1200);
+            });
+            $('#choice2').click(function() {
+                $('.dialogOverlay').show();
+                $('#incorrect-dialog').show();
+            });
+            $('#choice3').click(function() {
+                $('.dialogOverlay').show();
+                $('#incorrect-dialog').show();
+            });
+            $('#choice4').click(function() {
+                $('.dialogOverlay').show();
+                $('#incorrect-dialog').show();
+            });
+            $('#back').click(function() {
+                goBack();
+            });            
+            $('#correct-dialog, #correctchoice').click(function() {
+                $('#correctchoice').hide();
+                $('.dialogOverlay').hide();
+                $('#correct-dialog').hide();
+                $('#incorrect-dialog').hide();
+            });
+            $('#incorrect-dialog-retry').click(function() {
+                $('#correctchoice').hide();
+                $('.dialogOverlay').hide();
+                $('#correct-dialog').hide();
+                $('#incorrect-dialog').hide();
+            });
+            $('#incorrect-dialog-cancel').click(function() {
+                $('#correctchoice').hide();
+                $('.dialogOverlay').hide();
+                $('#correct-dialog').hide();
+                $('#incorrect-dialog').hide();
+            });
+        });
+        
+        function goBack() {
+            $.mobile.changePage("sub-naturalworld-volcanoes-cracksfromsurface.html", {transition: "slide", reverse: true });
+        }
+    
+        $('.homelinkbh').on('tap', function() { 
+            mainaudiobg.play(); sciencesoundbg.pause(); sciencesoundbg.currentTime = 0; 
+        });
+        
+    </script>
+</div>
