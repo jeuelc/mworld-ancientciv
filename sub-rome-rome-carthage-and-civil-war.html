@@ -21,6 +21,25 @@
 
 		<p>The third Punic War took place from 149-146 BCE when the Carthaginians went to war against the Numidians without Romes approval.  The city was razed to the ground and sown with salt to make its land permanently infertile.</p>
       </div>
+	  
+	  <!-- Navigational Divs -->
+		<div class="caesar_the_provoker-btn">
+			caesar_the_provoker
+		</div>
+		<div class="civil_war_1-btn">
+			civil_war_1
+		</div>
+		<div class="civil_war_2-btn">
+			civil_war_2
+		</div>
+		<div class="hannibal_and_cannae-btn">
+			hannibal_and_cannae
+		</div>
+		<div class="moving_east-btn">
+			moving_east
+		</div>		
+	  <!-- Navigational Divs ends here -->
+	        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
   	<!------------------------------------- Definition box ----------------------------------- -->
 	<div data-role="popup" id="Punic_War" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
@@ -108,5 +127,22 @@
       RomeCarthageAndCivilWaraudio.pause();
       //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
+	
+	
+			$('.caesar_the_provoker-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-rome-carthage-and-civil-war-caesar-the-provoker.html", {transition: "slide"});
+			});
+			$('.civil_war_1-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-rome-carthage-and-civil-war-civil-war-1.html", {transition: "slide"});
+			});
+			$('.civil_war_2-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-rome-carthage-and-civil-war-civil-war-2.html", {transition: "slide"});
+			});
+			$('.hannibal_and_cannae-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-rome-carthage-and-civil-war-hannibal-and-cannae.html", {transition: "slide"});
+			});
+			$('.moving_east-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war.html", {transition: "slide"});
+			});		
   </script>
 </div> <!--//home-->

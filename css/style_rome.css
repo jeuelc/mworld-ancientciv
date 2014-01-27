@@ -21,6 +21,27 @@
   width:1024px !important;
 }
 
+#sub-rome-rome-carthage-and-civil-war{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Rome_Carthage_And_Civil_War_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-rome-rome-carthage-and-civil-war-caesar-the-provoker{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Caesar_The_Provoker/Caesar_The_Provoker_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-rome-everyday-life-in-rome{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Everyday_Life_In_Rome_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
 .plRome, .psRome, .bRome, .fRome {
   position:absolute;
   top:670px;
@@ -193,8 +214,35 @@
 	position: absolute;
 	top: 44px;
 }
+
+#sub-rome-rome-carthage-and-civil-war .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+}
+
+#sub-rome-rome-carthage-and-civil-war-caesar-the-provoker .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+}
+
+#sub-rome-everyday-life-in-rome .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+}
 /* Common Header Design h1 */
-#sub-rome .bptitleholder h1, #sub-rome-republic-and-the-roman-character .bptitleholder h1, #sub-rome-early-rome .bptitleholder h1{
+#sub-rome .bptitleholder h1, #sub-rome-republic-and-the-roman-character .bptitleholder h1, #sub-rome-early-rome .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -204,7 +252,7 @@
 }
 
 /* Custom Page Header Design h1 */
-#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1{
+#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-caesar-the-provoker .bptitleholder h1, #sub-rome-everyday-life-in-rome .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -290,3 +338,109 @@
 	font-weight: normal;
 	color: #000000;
 }
+
+
+			.caesar_the_provoker-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:100px;
+				border:1px solid red;
+				background:#FFFFFF;
+			}
+			.civil_war_1-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:200px;
+				border:1px solid red;		
+				background:#FFFFFF;
+			}
+			.civil_war_2-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:300px;
+				border:1px solid red;				
+				background:#FFFFFF;
+			}
+			.hannibal_and_cannae-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:400px;
+				border:1px solid red;				
+				background:#FFFFFF;
+			}
+			.moving_east-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:500px;
+				border:1px solid red;				
+				background:#FFFFFF;
+			}
+			
+.food-btn{
+	position:absolute;
+	height:100px;
+	width:100px;
+	left:20px;
+	top:100px;
+	border:1px solid red;
+	background:#FFFFFF;
+}
+.household-btn{
+	position:absolute;
+	height:100px;
+	width:100px;
+	left:20px;
+	top:200px;
+	border:1px solid red;		
+	background:#FFFFFF;
+}
+.marriage-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:300px;
+				border:1px solid red;				
+				background:#FFFFFF;
+}
+.roman_slavery-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:400px;
+				border:1px solid red;				
+				background:#FFFFFF;
+}
+.roman_theatre-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:500px;
+				border:1px solid red;				
+				background:#FFFFFF;
+}
+.schooling-btn{
+				position:absolute;
+				height:100px;
+				width:100px;
+				left:20px;
+				top:600px;
+				border:1px solid red;				
+				background:#FFFFFF;
+}
+
+
+
+			

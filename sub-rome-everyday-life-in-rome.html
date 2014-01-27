@@ -1,0 +1,150 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-rome-everyday-life-in-rome">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_rome.js"></script>
+  <link rel="stylesheet" href="css/style_rome.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnRome"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnRome"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnRome"></div></div>
+  <div class="infobtnholder"><div class="infobtnRome"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
+  <div class="menubtnholder"><div class="menubtnRome"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Everyday life in Rome</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navRome-EverydayLifeInRome">
+        <p>The Romans did not spend all of their time at war.  The business of everyday life was very important to them.  Come and explore how the early Romans spent their days.</p>
+      </div>
+ 
+	  <!-- Navigational Divs -->
+		<div class="food-btn">
+			Food
+		</div>
+		<div class="household-btn">
+			Household
+		</div>
+		<div class="marriage-btn">
+			Marriage
+		</div>
+		<div class="roman_slavery-btn">
+			Roman Slavery
+		</div>
+		<div class="roman_theatre-btn">
+			Theatre
+		</div>
+		<div class="schooling-btn">
+			Schooling
+		</div>			
+	  <!-- Navigational Divs ends here -->
+	        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+  	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="Punic_War" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Punic Wars</p>
+			<p>The wars were called the Punic Wars because the Latin word for Phoenicia is Poeni, and the Romans still called the Carthaginians Phoenicians.</p>
+		</div>
+    </div>
+	<!---------------------------------------------------------------------------------------- -->   
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopEverydayLifeInRome"></div></div>
+    <div class="bRome"><div class="rwRome" id="EverydayLifeInRomeaudiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="EverydayLifeInRomeaudioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="EverydayLifeInRomeaudiofbtn"></div></div>
+    <div id="actualaudio-EverydayLifeInRome" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-EverydayLifeInRome').html('<audio id="EverydayLifeInRomeaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Everyday_Life_In_Rome.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-rome-everyday-life-in-rome").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-rome.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsRome() {
+         bgsoundRome.play();
+    }
+       
+    function pauseRome() {
+         bgsoundRome.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopEverydayLifeInRome").on('tap', function() {
+      if(!playing) {
+        EverydayLifeInRomeaudio.play();
+        $('.micbtnRome').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        EverydayLifeInRomeaudio.pause(); EverydayLifeInRomeaudio.currentTime = 0;
+        $('.micbtnRome').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#EverydayLifeInRomeaudioplbtn").on('tap', function() {
+      if(!paused) {
+        EverydayLifeInRomeaudio.pause();
+        paused = true;
+      } else {
+        EverydayLifeInRomeaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#EverydayLifeInRomeaudiofbtn").on('tap', function() {
+      var ctime = EverydayLifeInRomeaudio.currentTime;
+      EverydayLifeInRomeaudio.currentTime = ctime + 10;
+    });
+    
+    $("#EverydayLifeInRomeaudiobbtn").on('tap', function() {
+      var ctime = EverydayLifeInRomeaudio.currentTime;
+      EverydayLifeInRomeaudio.currentTime = ctime - 10;
+    });
+    
+    $("#EverydayLifeInRomeaudiopsbtn").on('tap', function() {
+      EverydayLifeInRomeaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+	
+	
+			$('.food-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-everyday-life-in-rome-food.html", {transition: "slide"});
+			});
+			$('.household-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-everyday-life-in-rome-household.html", {transition: "slide"});
+			});
+			$('.marriage-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-everyday-life-in-rome-marriage.html", {transition: "slide"});
+			});
+			$('.roman_slavery-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-everyday-life-in-rome-roman-slavery.html", {transition: "slide"});
+			});
+			$('.roman_theatre-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-everyday-life-in-rome-roman-theatre.html", {transition: "slide"});
+			});
+			$('.schooling-btn').on('tap',function(){
+				$.mobile.changePage("sub-rome-everyday-life-in-rome-schooling.html", {transition: "slide"});
+			});	
+  </script>
+</div> <!--//home-->
