@@ -1,0 +1,131 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>  
+  <script src="js/slidebar_rome.js"></script>
+  <link rel="stylesheet" href="css/style_rome.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnRome"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnRome"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnRome"></div></div>
+  <div class="infobtnholder"><div class="infobtnRome"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
+  <div class="menubtnholder"><div class="menubtnRome"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Moving East and the Civil War</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+		<div class="v-spacer"></div>
+		<div class="sidebarleft-half">
+			<div id="zoomwrapper">
+
+			</div><!--/zoomwrapper-->			
+		</div>
+      <div class="bpcontentRome">
+        <p>By 324 BCE, the world east of Rome was controlled by Alexander the Great.  After his death, his generals and successors fought relentlessly with each other: when Philip V of Macedon and Antiochus III decided to go against Ptolemy in Egypt, the Romans intervened.  Philip V was an enemy of Rome but Rome had good friends in the Attalids of Pergamon (their kingdom was located in central Asia Minor).  The Roman general Flamininus defeated Philip and, in 196 BCE, declared all the Greek cities to be free. </p>
+
+		<p>After Philip V came Perseus, who roused up democratic passions in Greece.  So, Rome invaded Greece again.  The Romans didn't seize any territory, but they did impose tough regulations on the Greek cities.  In 133 BCE, Attalus III <a href="#bequeathed" data-rel="popup">bequeathed</a> his kingdom to the Romans, firmly giving them a place in the politics of the East.  By then Romans had realised that expansion to the East was a vast money-making machine and empire-building was fabulously lucrative!  The massive wealth that was created for Rome awoke old tensions between rich and poor, and the Republic lived in a state of crisis for over 100 years.</p>
+		
+      </div>       
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+  	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="bequeathed" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Bequeathed</p>
+			<p>To bequeath is to leave your possession to someone else in your will.</p>
+		</div>
+    </div>
+	<!---------------------------------------------------------------------------------------- -->  	
+ </div><!--/spacechar-->      
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopMovingEastAndTheCivilWar"></div></div>
+    <div class="bRome"><div class="rwRome" id="MovingEastAndTheCivilWaraudiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="MovingEastAndTheCivilWaraudioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="MovingEastAndTheCivilWaraudiofbtn"></div></div>
+    <div id="actualaudio-MovingEastAndTheCivilWar" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+	  //Card Rotations
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
+	  
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-MovingEastAndTheCivilWar').html('<audio id="MovingEastAndTheCivilWaraudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Hannibal_And_Canne.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-rome-rome-carthage-and-civil-war.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsRome() {
+         bgsoundRome.play();
+    }
+       
+    function pauseRome() {
+         bgsoundRome.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopMovingEastAndTheCivilWar").on('tap', function() {
+      if(!playing) {
+        MovingEastAndTheCivilWaraudio.play();
+        $('.micbtnRome').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        MovingEastAndTheCivilWaraudio.pause(); MovingEastAndTheCivilWaraudio.currentTime = 0;
+        $('.micbtnRome').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#MovingEastAndTheCivilWaraudioplbtn").on('tap', function() {
+      if(!paused) {
+        MovingEastAndTheCivilWaraudio.pause();
+        paused = true;
+      } else {
+        MovingEastAndTheCivilWaraudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#MovingEastAndTheCivilWaraudiofbtn").on('tap', function() {
+      var ctime = MovingEastAndTheCivilWaraudio.currentTime;
+      MovingEastAndTheCivilWaraudio.currentTime = ctime + 10;
+    });
+    
+    $("#MovingEastAndTheCivilWaraudiobbtn").on('tap', function() {
+      var ctime = MovingEastAndTheCivilWaraudio.currentTime;
+      MovingEastAndTheCivilWaraudio.currentTime = ctime - 10;
+    });
+    
+    $("#MovingEastAndTheCivilWaraudiopsbtn").on('tap', function() {
+      MovingEastAndTheCivilWaraudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+	
+	//Pol On click Actions
+	
+  </script>
+  <script src="js/twocardLogic.js"></script>
+</div> <!--//home-->

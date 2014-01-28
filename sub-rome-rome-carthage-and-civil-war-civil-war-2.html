@@ -1,0 +1,135 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-rome-rome-carthage-and-civil-war-civil-war-2">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>  
+  <script src="js/slidebar_rome.js"></script>
+  <link rel="stylesheet" href="css/style_rome.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnRome"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnRome"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnRome"></div></div>
+  <div class="infobtnholder"><div class="infobtnRome"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
+  <div class="menubtnholder"><div class="menubtnRome"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Civil War II</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+		<div class="v-spacer"></div>
+		<div class="sidebarleft-half">
+			<div id="zoomwrapper">
+
+			</div><!--/zoomwrapper-->			
+		</div>
+      <div class="bpcontentRome">
+        <p>At times Rome was a confusing place  a lot of plotting went on, and people seemed to be always changing sides!</p>  
+
+		<p>During the war against Jugurtha, king of Numidia, in 111 BCE, Gaius Marius became very well known.  But it was Mariuss lieutenant, <a href="#Sulla" data-rel="popup"> Sulla</a>, who defeated Jugurtha for good.  The rivalry between these two men resulted in civil war in 88 BCE.  Marius recruited into his army poor people, promising to give them land.  But Sulla beat Marius and the Senate, fearful of an angry population, appointed Sulla dictator for life.  Sulla used his army to destroy his opponents through the 'proscriptions'.</p>  
+
+		<p>A few years later Pompey and Crassus were elected consuls.  As Pompey grew popular, Crassus got together with some other popular leaders.  The most popular of became friendly with Gaius Julius Caesar.  Caesar convinced Pompey and Crassus to reconcile, and the three of them formed the 'First Triumvirate' or secret political alliance.  Then, when Crassus died in a battle against the Parthians, Pompey and Caesar headed for civil war!</p>
+
+		
+      </div>       
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+ </div><!--/spacechar-->   
+
+  	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="Sulla" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Sulla</p>
+			<p>Sulla asked the Senate and the romans to identify to the authorities those considered as enemies of the state.  Named individuals were stripped of their civic rights and were executed immediately.  The informers received financial rewards and/or parts of the proscribed men's estate.  Often people were accused falsely so that the informers could get hold of their property.</p>
+		</div>
+    </div>
+	<!---------------------------------------------------------------------------------------- -->       
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopCivilWar2"></div></div>
+    <div class="bRome"><div class="rwRome" id="CivilWar2audiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="CivilWar2audioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="CivilWar2audiofbtn"></div></div>
+    <div id="actualaudio-CivilWar2" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+	  //Card Rotations
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
+	  
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-CivilWar2').html('<audio id="CivilWar2audio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Civil_War_2.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-rome-rome-carthage-and-civil-war-civil-war-2").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-rome-rome-carthage-and-civil-war.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsRome() {
+         bgsoundRome.play();
+    }
+       
+    function pauseRome() {
+         bgsoundRome.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopCivilWar2").on('tap', function() {
+      if(!playing) {
+        CivilWar2audio.play();
+        $('.micbtnRome').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        CivilWar2audio.pause(); CivilWar2audio.currentTime = 0;
+        $('.micbtnRome').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#CivilWar2audioplbtn").on('tap', function() {
+      if(!paused) {
+        CivilWar2audio.pause();
+        paused = true;
+      } else {
+        CivilWar2audio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#CivilWar2audiofbtn").on('tap', function() {
+      var ctime = CivilWar2audio.currentTime;
+      CivilWar2audio.currentTime = ctime + 10;
+    });
+    
+    $("#CivilWar2audiobbtn").on('tap', function() {
+      var ctime = CivilWar2audio.currentTime;
+      CivilWar2audio.currentTime = ctime - 10;
+    });
+    
+    $("#CivilWar2audiopsbtn").on('tap', function() {
+      CivilWar2audio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+	
+	//Pol On click Actions
+	
+  </script>
+  <script src="js/twocardLogic.js"></script>
+</div> <!--//home-->

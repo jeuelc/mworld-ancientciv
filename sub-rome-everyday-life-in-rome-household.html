@@ -1,0 +1,114 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-rome-everyday-life-in-rome-household">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_rome.js"></script>
+  <link rel="stylesheet" href="css/style_rome.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnRome"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnRome"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnRome"></div></div>
+  <div class="infobtnholder"><div class="infobtnRome"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
+  <div class="menubtnholder"><div class="menubtnRome"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Household</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navRome-Household">
+			<p>The head of the Roman family was the 'pater familias'.  </p>
+
+			<p>He was the boss!  He had absolute power over his children and descendants.  But however rigid this authority was theoretically, it was greatly modified in practice.  This happened under the Republic by custom and under the Empire by law. 
+			The head of the house usually assigned to his children property, 'peclium' (which directly translated means 'property in cattle'), for them to manage for their own benefit.  And although the 'pater familis' theoretically owned all their <a href="#acquisitions" data-rel="popup">acquisitions</a>, in practice he was their trustee, helping them to manage them.</p>
+			  
+			<p>In marrying, the wife was separated entirely from her father's family and passed into her husband's power or 'hand' ('conventi in manum').  Have you ever heard the expression asking for someones hand in marriage?  This is where it comes from!</p>
+      </div>
+	        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+  	<!------------------------------------- Definition box ----------------------------------- -->
+	<div data-role="popup" id="acquisitions" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Acquisitions</p>
+			<p>Acquisitions refer to someone's property and assets and a trustee is someone who has the legal responsibility to manage them.</p>
+		</div>
+    </div>
+	<!-- -------------------------------------------------------------------------------------- -->   
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopHousehold"></div></div>
+    <div class="bRome"><div class="rwRome" id="Householdaudiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="Householdaudioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="Householdaudiofbtn"></div></div>
+    <div id="actualaudio-Household" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-Household').html('<audio id="Householdaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Household.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-rome-everyday-life-in-rome-household").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-rome-everyday-life-in-rome.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsRome() {
+         bgsoundRome.play();
+    }
+       
+    function pauseRome() {
+         bgsoundRome.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopHousehold").on('tap', function() {
+      if(!playing) {
+        Householdaudio.play();
+        $('.micbtnRome').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        Householdaudio.pause(); Householdaudio.currentTime = 0;
+        $('.micbtnRome').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#Householdaudioplbtn").on('tap', function() {
+      if(!paused) {
+        Householdaudio.pause();
+        paused = true;
+      } else {
+        Householdaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#Householdaudiofbtn").on('tap', function() {
+      var ctime = Householdaudio.currentTime;
+      Householdaudio.currentTime = ctime + 10;
+    });
+    
+    $("#Householdaudiobbtn").on('tap', function() {
+      var ctime = Householdaudio.currentTime;
+      Householdaudio.currentTime = ctime - 10;
+    });
+    
+    $("#Householdaudiopsbtn").on('tap', function() {
+      Householdaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+  </script>
+</div> <!--//home-->

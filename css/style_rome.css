@@ -1,5 +1,5 @@
 /* Main common basic pages */
-#sub-rome, #sub-rome-republic-and-the-roman-character, #sub-rome-early-rome {
+#sub-rome, #sub-rome-republic-and-the-roman-character, #sub-rome-early-rome, #sub-rome-early-rome-etruscans, #sub-rome-everyday-life-in-rome-food, #sub-rome-everyday-life-in-rome-marriage, #sub-rome-everyday-life-in-rome-roman-slavery, #sub-rome-everyday-life-in-rome-schooling, #sub-rome-republic-and-the-roman-character-magistrates-and-the-roman-character, #sub-rome-republic-and-the-roman-character-the-senate, #sub-rome-rome-carthage-and-civil-war-civil-war-1, #sub-rome-rome-carthage-and-civil-war-civil-war-2, #sub-rome-rome-carthage-and-civil-war-hannibal-and-cannae, #sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war{
   background:url('images/9-12/Ancient_Civilizations/Rome/Rome_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -37,6 +37,19 @@
 
 #sub-rome-everyday-life-in-rome{
   background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Everyday_Life_In_Rome_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+#sub-rome-everyday-life-in-rome-household{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/Household_BG.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-rome-everyday-life-in-rome-roman-theatre{
+  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Theatre/Roman_Theatre_BG.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
@@ -186,7 +199,7 @@
 }
 
 /* Common Header Div Design */
-#sub-rome .bptitleholder, #sub-rome-republic-and-the-roman-character .bptitleholder, #sub-rome-early-rome .bptitleholder{
+#sub-rome .bptitleholder, #sub-rome-republic-and-the-roman-character .bptitleholder, #sub-rome-early-rome .bptitleholder, #sub-rome-early-rome-etruscans .bptitleholder, #sub-rome-everyday-life-in-rome-food .bptitleholder, #sub-rome-everyday-life-in-rome-marriage .bptitleholder, #sub-rome-everyday-life-in-rome-roman-slavery .bptitleholder, #sub-rome-everyday-life-in-rome-schooling .bptitleholder, #sub-rome-republic-and-the-roman-character-magistrates-and-the-roman-character .bptitleholder, #sub-rome-republic-and-the-roman-character-the-senate .bptitleholder,  #sub-rome-rome-carthage-and-civil-war-civil-war-1 .bptitleholder, #sub-rome-rome-carthage-and-civil-war-civil-war-2 .bptitleholder, #sub-rome-rome-carthage-and-civil-war-hannibal-and-cannae .bptitleholder, #sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war .bptitleholder{
 	width: 627px;
 	height: 68px;
 	text-align: center;
@@ -241,8 +254,26 @@
 	position: absolute;
 	top: 44px;
 }
+
+#sub-rome-everyday-life-in-rome-household .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+}
+
+#sub-rome-everyday-life-in-rome-roman-theatre .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+}
 /* Common Header Design h1 */
-#sub-rome .bptitleholder h1, #sub-rome-republic-and-the-roman-character .bptitleholder h1, #sub-rome-early-rome .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war .bptitleholder h1{
+#sub-rome .bptitleholder h1, #sub-rome-republic-and-the-roman-character .bptitleholder h1, #sub-rome-early-rome .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war .bptitleholder h1,  #sub-rome-early-rome-etruscans .bptitleholder h1,  #sub-rome-everyday-life-in-rome-food .bptitleholder h1, #sub-rome-everyday-life-in-rome-marriage .bptitleholder h1, #sub-rome-everyday-life-in-rome-roman-slavery .bptitleholder h1, #sub-rome-everyday-life-in-rome-schooling .bptitleholder h1, #sub-rome-republic-and-the-roman-character-magistrates-and-the-roman-character .bptitleholder h1, #sub-rome-republic-and-the-roman-character-the-senate .bptitleholder h1,  #sub-rome-rome-carthage-and-civil-war-civil-war-1 .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-civil-war-2 .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-hannibal-and-cannae .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -252,7 +283,7 @@
 }
 
 /* Custom Page Header Design h1 */
-#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-caesar-the-provoker .bptitleholder h1, #sub-rome-everyday-life-in-rome .bptitleholder h1{
+#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-caesar-the-provoker .bptitleholder h1, #sub-rome-everyday-life-in-rome .bptitleholder h1,#sub-rome-everyday-life-in-rome-household .bptitleholder h1, #sub-rome-everyday-life-in-rome-roman-theatre .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
@@ -311,6 +342,73 @@
 	font-weight: normal;
 	color: #000000;
 }
+.navRome-EverydayLifeInRome{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+.navRome-RomeCarthageAndCivilWar{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navRome-CaesarTheProvoker{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+.navRome-RomeTheItaliansAndTheGreeks{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navRome-Household{
+	position: absolute;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
 .actualaudio-RomeTheItaliansAndTheGreeks{
 	position: absolute;
 	left: 26px;
@@ -325,12 +423,12 @@
 	color: #000000;
 }
 
-.navRome-SongStyleShowcase{
+.navRome-RomanTheatre{
 	position: absolute;
-	left: 298px;
-	top: 163px;
-	width: 426px;
-	height: 417px;
+	left: 26px;
+	top: 300px;
+	width: 973px;
+	height: 400px;
 	overflow: auto;
 	text-align: center;
 	font-family: comic sans ms;

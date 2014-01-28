@@ -1,5 +1,5 @@
 <!-- i-C-a -->
-<div data-role="page" id="sub-rome-early-rome-etruscans">
+<div data-role="page" id="sub-rome-everyday-life-in-rome-food">
   <!-- <script src="js/slidebarnat.js"></script> -->
   <script src="js/hammer.js"></script>
   <script src="js/jquery.hammer.js"></script>  
@@ -13,7 +13,7 @@
   <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
   <div class="menubtnholder"><div class="menubtnRome"></div></div>
   
-  <div class="bptitleholder" style="padding-top:14px;"><h1>Etruscans</h1></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Food</h1></div>
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
@@ -23,10 +23,12 @@
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
-        <p>No one knows for sure where the Etruscans came from  it's still a mystery!  But archaeologists suspect they came from the eastern Mediterranean, possibly Asia Minor.  The Etruscans brought to Italy a more urban way of living.  They lived in independent, fortified city-states that formed small 'confederacies'  you could think of them as a group of friendly states. </p>
-		<p>The Latins who founded Rome were an Italic people who lived in a small village south of the Tiber River, and cultivated the land.  They were tribal people and you can see that 'tribal' way of organising society throughout Roman history.  However, as they steadily developed their city, its government and its culture, they imitated the neighbouring civilization to the north, the Etruscans.  The Etruscans reacted by taking them over!  </p>
- 
-		<p>Livy, a Roman historian writing much later, (first century BCE) recorded the myth that Rome was founded by Romulus and Remus, but he also recorded the tragic story of the expulsion of the Etruscan kings.  Both tales tell of the desire for power that shaped Roman history, but, also, the toll of blood that Rome had to pay for it.</p>
+        <p>In early Rome people ate mostly soup and boiled meats, and they didn't bake bread (the Roman fascination with bread starts after 300 BCE).  
+		It took a lot of labour to prepare Roman food.  Imagine you're helping.  First you have to grind flour between two heavy stones, and then sift it.  Then, you'd use a pestle and mortar (special grinding bowl and stick) to crush nuts or herbs.  Most Romans liked their food spicy with a lot of pepper.</p>  
+
+		<p>Utensils made of iron were very expensive, so the average Roman used bronze knives and spoons.  Forks were not used by the Romans, who often ate with their fingers.  Plates for the average Roman were made of wood or pottery, while the rich ate from metal plates of tin, bronze or pewter. </p>
+
+		<p>Romans didn't use soap so the cleaning of the bowls was done by rinsing with water.  Metal dishes and utensils were cleaned by rubbing sand on them and then rinsing with water.</p>
 
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
@@ -35,11 +37,11 @@
   
   <!--<div class="audiopanel">-->
     <!-- images are in slidebarnat.js -->
-    <div class="micbtnholder"><div class="micbtnRome" id="playstopEtruscans"></div></div>
-    <div class="bRome"><div class="rwRome" id="Etruscansaudiobbtn"></div></div>
-    <div class="plRome"><div class="plpsRome" id="Etruscansaudioplbtn"></div></div>
-    <div class="fRome"><div class="fwRome" id="Etruscansaudiofbtn"></div></div>
-    <div id="actualaudio-Etruscans" style="visibility:hidden;"></div>
+    <div class="micbtnholder"><div class="micbtnRome" id="playstopFood"></div></div>
+    <div class="bRome"><div class="rwRome" id="Foodaudiobbtn"></div></div>
+    <div class="plRome"><div class="plpsRome" id="Foodaudioplbtn"></div></div>
+    <div class="fRome"><div class="fwRome" id="Foodaudiofbtn"></div></div>
+    <div id="actualaudio-Food" style="visibility:hidden;"></div>
   <!--</div>-->
   <script>
   // sound setup is in home.html and index.js
@@ -56,16 +58,16 @@
       $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
 	  
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-Etruscans').html('<audio id="Etruscansaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Etruscans.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-Food').html('<audio id="Foodaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Food.mp3" type="audio/mpeg"></audio>');
       } 
     
-      $("#sub-rome-early-rome-etruscans").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+      $("#sub-rome-everyday-life-in-rome-food").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
     $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {
-      $.mobile.changePage("sub-rome-early-rome.html", {transition: "slide", reverse: true });
+      $.mobile.changePage("sub-rome-everyday-life-in-rome.html", {transition: "slide", reverse: true });
     }
     
     function playsRome() {
@@ -78,43 +80,43 @@
     /* ******************** */
     /* this is the microphone button */
 	
-    $("#playstopEtruscans").on('tap', function() {
+    $("#playstopFood").on('tap', function() {
       if(!playing) {
-        Etruscansaudio.play();
+        Foodaudio.play();
         $('.micbtnRome').css('background-position-x', '-81px');
         playing = true;
         paused = false;
       } else {
-        Etruscansaudio.pause(); Etruscansaudio.currentTime = 0;
+        Foodaudio.pause(); Foodaudio.currentTime = 0;
         $('.micbtnRome').css('background-position-x', '0px');
         playing = false;
         paused = true;
       }
     });
     
-    $("#Etruscansaudioplbtn").on('tap', function() {
+    $("#Foodaudioplbtn").on('tap', function() {
       if(!paused) {
-        Etruscansaudio.pause();
+        Foodaudio.pause();
         paused = true;
       } else {
-        Etruscansaudio.play();
+        Foodaudio.play();
         paused = false;
       }
       //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
     });
     
-    $("#Etruscansaudiofbtn").on('tap', function() {
-      var ctime = Etruscansaudio.currentTime;
-      Etruscansaudio.currentTime = ctime + 10;
+    $("#Foodaudiofbtn").on('tap', function() {
+      var ctime = Foodaudio.currentTime;
+      Foodaudio.currentTime = ctime + 10;
     });
     
-    $("#Etruscansaudiobbtn").on('tap', function() {
-      var ctime = Etruscansaudio.currentTime;
-      Etruscansaudio.currentTime = ctime - 10;
+    $("#Foodaudiobbtn").on('tap', function() {
+      var ctime = Foodaudio.currentTime;
+      Foodaudio.currentTime = ctime - 10;
     });
     
-    $("#Etruscansaudiopsbtn").on('tap', function() {
-      Etruscansaudio.pause();
+    $("#Foodaudiopsbtn").on('tap', function() {
+      Foodaudio.pause();
       //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
 	
