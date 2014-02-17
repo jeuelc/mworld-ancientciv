@@ -10,7 +10,7 @@
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/aibtn.png"></a></div>
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/aztecbtn.png"></a></div><br>
       <div class="aclink"><a href="sub-rome.html" data-transition="slide" id="rome"><img src="css/images/9-12/Ancient_Civilizations/romebtn.png"></a></div>
-      <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/egyptbtn.png"></a></div>
+      <div class="aclink"><a href="sub-early-china.html" data-transition="slide" id="earlychina"><img src="css/images/9-12/Ancient_Civilizations/egyptbtn.png"></a></div>
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/eabtn.png"></a></div>
       <div class="aclink"><a href="#" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/incasbtn.png"></a></div>
     </div>
@@ -27,15 +27,15 @@
     </div> <!--/pre-ac -->
   </div> <!-- end content -->  
     <script>
-				$(function() {
-          //agvideo = document.getElementById("agvideo");
-					$("#ancient").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
-          agvideo.addEventListener('ended', function() { 
-            //agvideo.webkitExitFullscreen();
-            agsoundbg.play(); 
-            $.mobile.changePage("sub-ac-greece.html");  
-          });
-				});
+	$(function() {
+	  //agvideo = document.getElementById("agvideo");
+				$("#ancient").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+	  agvideo.addEventListener('ended', function() { 
+		//agvideo.webkitExitFullscreen();
+		agsoundbg.play(); 
+		$.mobile.changePage("sub-ac-greece.html");  
+	  });
+	});
         
     function goBack() {
       $.mobile.changePage("home.html");
@@ -63,17 +63,21 @@
         $.mobile.changePage("sub-ac-greece.html");
     });
 	
-		$(document).ready(function(e) {
-			$('.aclink>a').on('tap', function(event) {
-				var subjectId = $(this).attr("id");
-				if(subjectId == "rome") {
-					bgsoundRome.play();
-					ancientsoundbg.pause();
-					ancientsoundbg.currentTime = 0;
-				}
-
-			});
-		});		
+	$(document).ready(function(e) {
+		$('.aclink>a').on('tap', function(event) {
+			var subjectId = $(this).attr("id");
+			if(subjectId == "rome") {
+				bgsoundRome.play();
+				ancientsoundbg.pause();
+				ancientsoundbg.currentTime = 0;
+			}
+			else if(subjectId == "earlychina"){
+				bgsoundEarlyChina.play();
+				ancientsoundbg.pause();
+				ancientsoundbg.currentTime = 0;
+			}
+		});
+	});		
 	
-			</script>
+	</script>
 </div>

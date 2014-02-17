@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-han-dynasty-art-and-music">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <!-- <div id="belovedlink" style="position:absolute;left: 72px;top: 518px;width: 190px;height: 155px;"></div>
+  <div id="buddhismlink" style="position:absolute;left: 310px;top: 505px;width: 190px;height: 170px;"></div>
+  <div id="gettinggoodslink" style="position:absolute;left: 549px;top: 505px;width: 190px;height: 175px;"></div>
+  <div id="legacylink" style="position:absolute;left: 790px;top: 503px;width: 183px;height: 173px;"></div> -->
+    
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-ArtAndMusic">
+		<p>Changes in culture in early China can be seen in the art and music of the Han dynasty.  Examples of Han art survive in museums around the world, many coming from the tombs of wealthy Han Chinese.</p>
+		<p>The tombs of the prince Liu Sheng and his wife Dou Wan, for example, were like underground palaces filled with thousands of precious artefacts!  Their bodies were encased in jade suits.  Jade was believed to have something magical about it that preserved corpses from decay.</p>
+		<p>Music was very important to the Han and other early Chinese.  For example, in one tomb from the Warring States period there were 125 instruments including lithophones (stones chimes), drums, wind instruments, zithers (string instruments), lutes, and many others!</p>
+		<p>Confucius thought that music symbolised harmony, something that was essential to bring out goodness in people and foster harmonious societies.  The Han believed that, too, and they were so keen on music that they established a special office just to collect music and poetry from around the Empire.  This Music Bureau (<I>yuefu</I> in Chinese) ended up surviving over 2000 years!</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopArtAndMusic"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="ArtAndMusicaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="ArtAndMusicaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="ArtAndMusicaudiofbtn"></div></div>
+    <div id="actualaudio-ArtAndMusic" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-ArtAndMusic').html('<audio id="ArtAndMusicaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Art_And_Music.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-han-dynasty-art-and-music").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#belovedlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-han-dynasty-art-and-music-a-beloved-battle.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china-han-dynasty.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopArtAndMusic").on('tap', function() {
+      if(!playing) {
+        ArtAndMusicaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        ArtAndMusicaudio.pause(); ArtAndMusicaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#ArtAndMusicaudioplbtn").on('tap', function() {
+      if(!paused) {
+        ArtAndMusicaudio.pause();
+        paused = true;
+      } else {
+        ArtAndMusicaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#ArtAndMusicaudiofbtn").on('tap', function() {
+      var ctime = ArtAndMusicaudio.currentTime;
+      ArtAndMusicaudio.currentTime = ctime + 10;
+    });
+    
+    $("#ArtAndMusicaudiobbtn").on('tap', function() {
+      var ctime = ArtAndMusicaudio.currentTime;
+      ArtAndMusicaudio.currentTime = ctime - 10;
+    });
+    
+    $("#ArtAndMusicaudiopsbtn").on('tap', function() {
+      ArtAndMusicaudio.pause();
+    });
+  </script>
+</div> <!--//home-->

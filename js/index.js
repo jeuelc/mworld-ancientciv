@@ -859,3 +859,11 @@ bgsoundRome.addEventListener('ended', function() { bgsoundRome.play(); });
 
 function pauseRome() { bgsoundRome.pause() }
 function playsRome() { bgsoundRome.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }
+
+/************************ Early China *******************************/
+var bgsoundEarlyChina = new Audio();
+bgsoundEarlyChina.src = "audio/Early_China/Early_China_BG.mp3";
+bgsoundEarlyChina.addEventListener('ended', function() { bgsoundEarlyChina.play(); });
+
+function pauseEarlyChina() { bgsoundEarlyChina.pause() }
+function playsEarlyChina() { bgsoundEarlyChina.play(); $(".audiopanel").css({"backgroundPosition":"0px 0px"}); }

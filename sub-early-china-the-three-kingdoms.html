@@ -1,0 +1,120 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-the-three-kingdoms">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <div id="belovedlink" style="position:absolute;left: 72px;top: 518px;width: 190px;height: 155px;"></div>
+  <div id="buddhismlink" style="position:absolute;left: 310px;top: 505px;width: 190px;height: 170px;"></div>
+  <div id="gettinggoodslink" style="position:absolute;left: 549px;top: 505px;width: 190px;height: 175px;"></div>
+  <div id="legacylink" style="position:absolute;left: 790px;top: 503px;width: 183px;height: 173px;"></div>
+    
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-TheThreeKingdoms">
+		<p>Conspiracies, economic crises and rebellions finally caused the Han Empire to collapse in 220 CE.  This didn't occur overnight.  Rather, over many years the Empire grew weaker and weaker, and ambitious people decided that they wanted to seize power for themselves.</p>
+		<p>Many poor people got so fed up with paying high taxes and being mistreated by their landlords that they took up arms.  For thirty years rebellions raged on and off across the country.  Groups with funny names such as the Yellow Turbans and the Celestial Masters fought the central government.  Finally, the Han Empire collapsed and power in China passed into the hands of local warlords.</p>
+		<p>The three biggest warlord states at that time were the Wei in the north, Wu in the south and Shu in the southwest, although other states arose along the fringes.  The Xiongnu also managed to seize power in the north and founded their own dynasty, the Northern Han.  It was a very violent and unsettled time for China!</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopTheThreeKingdoms"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="TheThreeKingdomsaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="TheThreeKingdomsaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="TheThreeKingdomsaudiofbtn"></div></div>
+    <div id="actualaudio-TheThreeKingdoms" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-TheThreeKingdoms').html('<audio id="TheThreeKingdomsaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/The_Three_Kingdoms.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-the-three-kingdoms").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#belovedlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-the-three-kingdoms-a-beloved-battle.html", {transition: "slide"});
+    });
+	$('#buddhismlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-the-three-kingdoms-Buddhism.html", {transition: "slide"});
+    });
+	$('#gettinggoodslink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-the-three-kingdoms-getting-the-goods.html", {transition: "slide"});
+    });
+	$('#legacylink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-the-three-kingdoms-legacy.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopTheThreeKingdoms").on('tap', function() {
+      if(!playing) {
+        TheThreeKingdomsaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        TheThreeKingdomsaudio.pause(); TheThreeKingdomsaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#TheThreeKingdomsaudioplbtn").on('tap', function() {
+      if(!paused) {
+        TheThreeKingdomsaudio.pause();
+        paused = true;
+      } else {
+        TheThreeKingdomsaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#TheThreeKingdomsaudiofbtn").on('tap', function() {
+      var ctime = TheThreeKingdomsaudio.currentTime;
+      TheThreeKingdomsaudio.currentTime = ctime + 10;
+    });
+    
+    $("#TheThreeKingdomsaudiobbtn").on('tap', function() {
+      var ctime = TheThreeKingdomsaudio.currentTime;
+      TheThreeKingdomsaudio.currentTime = ctime - 10;
+    });
+    
+    $("#TheThreeKingdomsaudiopsbtn").on('tap', function() {
+      TheThreeKingdomsaudio.pause();
+    });
+  </script>
+</div> <!--//home-->

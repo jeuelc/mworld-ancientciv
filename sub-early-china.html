@@ -1,0 +1,138 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china">
+  <!-- <script src="js/slidebarnat.js"></script> -->
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:14px;"><h1>Early China</h1></div>
+  
+    <div data-role="content" class="kidzcontent">
+      <div class="navEarlyChina-content">
+        <p>You probably know that China is one of the largest countries in the world.  But did you know that Chinese civilisation has lasted from way back in prehistoric times to today?</p>
+		<p>As one of the oldest (if not the oldest) civilisations in the modern world, the roots of Chinese culture go back more than 5000 years!</p>
+		<p>The Chinese Empire was founded almost 2300 years ago.  There were many periods of conflict and war in early China, including times when the unity of the empire was broken up.  There were also many major cultural, artistic and technological innovations whose legacy continues today.</p>
+		<p>Come and find out more about early China!</p>
+      </div>
+        
+      <div class="navbtn1">
+        <p><a href="sub-early-china-early-days.html" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/Early_China/Early_Days.png"></a></p>
+      </div>
+      <div class="navbtn2">
+        <p><a href="sub-early-china-han-dynasty.html" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty.png"></a></p>
+      </div>
+      <div class="navbtn3">
+        <p><a href="sub-early-china-the-three-kingdoms.html" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/Early_China/The_Three_Kingdoms.png"></a></p>
+      </div>
+      <div class="navbtn4">
+        <p><a href="sub-early-china-unification-and-the-kin-dynasty.html" data-transition="slide"><img src="css/images/9-12/Ancient_Civilizations/Early_China/Unification.png"></a></p>
+      </div>
+        
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopEarlyChinas"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="EarlyChinasaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="EarlyChinasaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="EarlyChinasaudiofbtn"></div></div>
+    <div id="actualaudio-EarlyChinas" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-EarlyChinas').html('<audio id="EarlyChinasaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Early_China.mp3" type="audio/mpeg"></audio>');
+      } 
+      $("#sub-early-china").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+    $('.homelinkbh').on('tap', function() { bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0; mainaudiobg.play(); });
+    
+    function goBack() {
+      $.mobile.changePage("sub-ancient.html", {transition: "slide", reverse: true });
+      bgsoundEarlyChina.pause(); 
+      bgsoundEarlyChina.currentTime = 0;
+      ancientsoundbg.play();
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+	
+    $("#playstopEarlyChinas").on('tap', function() {
+      if(!playing) {
+        EarlyChinasaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        EarlyChinasaudio.pause(); EarlyChinasaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#EarlyChinasaudioplbtn").on('tap', function() {
+      if(!paused) {
+        EarlyChinasaudio.pause();
+        paused = true;
+      } else {
+        EarlyChinasaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#EarlyChinasaudiofbtn").on('tap', function() {
+      var ctime = EarlyChinasaudio.currentTime;
+      EarlyChinasaudio.currentTime = ctime + 10;
+    });
+    
+    $("#EarlyChinasaudiobbtn").on('tap', function() {
+      var ctime = EarlyChinasaudio.currentTime;
+      EarlyChinasaudio.currentTime = ctime - 10;
+    });
+    
+    $("#EarlyChinasaudiopsbtn").on('tap', function() {
+      EarlyChinasaudio.pause();
+      //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
+    });
+    
+    $('.navbtn1').on('tap', function() { 
+      nav1Effects(); 
+    });
+    
+    $('.navbtn2').on('tap', function() { 
+      nav2Effects(); 
+    });
+    
+    $('.navbtn3').on('tap', function() { 
+      nav3Effects(); 
+    });
+    
+    $('.navbtn4').on('tap', function() { 
+      nav4Effects(); 
+    });
+  </script>
+</div> <!--//home-->

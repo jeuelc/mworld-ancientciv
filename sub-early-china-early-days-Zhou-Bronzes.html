@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-early-days-Zhou-Bronzes">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <!-- <div id="belovedlink" style="position:absolute;left: 72px;top: 518px;width: 190px;height: 155px;"></div>
+  <div id="buddhismlink" style="position:absolute;left: 310px;top: 505px;width: 190px;height: 170px;"></div>
+  <div id="gettinggoodslink" style="position:absolute;left: 549px;top: 505px;width: 190px;height: 175px;"></div>
+  <div id="legacylink" style="position:absolute;left: 790px;top: 503px;width: 183px;height: 173px;"></div> -->
+    
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-ZhouBronzes">
+		<p>The Shang state was one of several big powers of Chinas late Bronze Age.  Different kingdoms had their own cultural diversity and artistic styles.  You can see this from the bronze, ivory and jade items from Sanxingdui near Chengdu, or from the rich tombs of the Chu kingdom in the south.</p>
+		<p>Around 1000 BCE, the Shang state was conquered by the kingdom of Zhou.</p>
+		<p>The new Zhou dynastic period is divided into three time frames: 'Western Zhou' (1050-770 BCE), 'Spring and Autumn' (770-475 BCE) and 'Warring States' (475-221 BCE).  The Zhou capitals were clusters of settlements around a royal palace.  The palaces were built on a rammed-earth platform with wooden frames and ceramic roof tiles.</p>
+		<p>Zhou ritual bronzes were developed from Shang bronze types and were used in similar ways.  For example, long inscriptions recorded special events.  Zhou bronzes also continued to use the <I>taotie</I> design, a dragon-like symbol similar to the image below, whose origins can be traced back to Chinese Neolithic culture.</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopZhouBronzes"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="ZhouBronzesaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="ZhouBronzesaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="ZhouBronzesaudiofbtn"></div></div>
+    <div id="actualaudio-ZhouBronzes" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-ZhouBronzes').html('<audio id="ZhouBronzesaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Zhou_Bronzes.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-early-days-Zhou-Bronzes").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#belovedlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-early-days-Zhou-Bronzes-a-beloved-battle.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china-early-days.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopZhouBronzes").on('tap', function() {
+      if(!playing) {
+        ZhouBronzesaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        ZhouBronzesaudio.pause(); ZhouBronzesaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#ZhouBronzesaudioplbtn").on('tap', function() {
+      if(!paused) {
+        ZhouBronzesaudio.pause();
+        paused = true;
+      } else {
+        ZhouBronzesaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#ZhouBronzesaudiofbtn").on('tap', function() {
+      var ctime = ZhouBronzesaudio.currentTime;
+      ZhouBronzesaudio.currentTime = ctime + 10;
+    });
+    
+    $("#ZhouBronzesaudiobbtn").on('tap', function() {
+      var ctime = ZhouBronzesaudio.currentTime;
+      ZhouBronzesaudio.currentTime = ctime - 10;
+    });
+    
+    $("#ZhouBronzesaudiopsbtn").on('tap', function() {
+      ZhouBronzesaudio.pause();
+    });
+  </script>
+</div> <!--//home-->

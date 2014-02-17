@@ -1,0 +1,125 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-early-days">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <div id="ricelink" style="position:absolute;left: 40px;top: 245px;width: 240px;height: 80px;"></div>
+  <div id="shanglink" style="position:absolute;left: 40px;top: 332px;width: 240px;height: 80px;"></div>
+  <div id="zhoulink" style="position:absolute;left: 40px;top: 420px;width: 240px;height: 80px;"></div>
+  <div id="confuciuslink" style="position:absolute;left: 40px;top: 505px;width: 240px;height: 80px;"></div>
+  <div id="warringlink" style="position:absolute;left: 40px;top: 595px;width: 240px;height: 80px;"></div>
+  
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-EarlyDays">
+		<p>Throughout the history of China there were times when the nation was split into<br />lots of smaller states, alternating with times when it was characterised by unified and centralised states.</p>
+		<p>At the time of the Xia Dynasty, around 2000 BCE (Before Common Era), there were 3000 smaller states!  Then around the 8th century BCE, these became 23 (this was during the 'Spring and Autumn' period of the Eastern Zhou Dynasty).  And then a few centuries later, during the 'Warring States' period, these 23 became seven.  Finally by 221 BCE there was only one, the Qin kingdom, which founded the Chinese Empire.</p>
+		<p>Most of the smaller states developed in the central plains between the Huang He (Yellow River) and the Yangzi river valleys where earlier Neolithic, or 'New Stone Age', people settled down in agricultural communities.</p>
+		<p>This region was the cradle of the ancient Chinese civilization where the early kingdoms of the Shang and Zhou emerged and disappeared over the course of time.</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopEarlyDays"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="EarlyDaysaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="EarlyDaysaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="EarlyDaysaudiofbtn"></div></div>
+    <div id="actualaudio-EarlyDays" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-EarlyDays').html('<audio id="EarlyDaysaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Early_Days.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-early-days").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#ricelink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-early-days-Rice-and-Early-Agricultural-communities.html", {transition: "slide"});
+    });
+	$('#shanglink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-early-days-Shang-Bronzes.html", {transition: "slide"});
+    });
+	$('#zhoulink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-early-days-Zhou-Bronzes.html", {transition: "slide"});
+    });
+	$('#confuciuslink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-early-days-confucius.html", {transition: "slide"});
+    });
+	$('#warringlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-early-days-Warring-States.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopEarlyDays").on('tap', function() {
+      if(!playing) {
+        EarlyDaysaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        EarlyDaysaudio.pause(); EarlyDaysaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#EarlyDaysaudioplbtn").on('tap', function() {
+      if(!paused) {
+        EarlyDaysaudio.pause();
+        paused = true;
+      } else {
+        EarlyDaysaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#EarlyDaysaudiofbtn").on('tap', function() {
+      var ctime = EarlyDaysaudio.currentTime;
+      EarlyDaysaudio.currentTime = ctime + 10;
+    });
+    
+    $("#EarlyDaysaudiobbtn").on('tap', function() {
+      var ctime = EarlyDaysaudio.currentTime;
+      EarlyDaysaudio.currentTime = ctime - 10;
+    });
+    
+    $("#EarlyDaysaudiopsbtn").on('tap', function() {
+      EarlyDaysaudio.pause();
+    });
+  </script>
+</div> <!--//home-->

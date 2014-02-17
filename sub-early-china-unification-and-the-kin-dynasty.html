@@ -1,0 +1,130 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-unification-and-the-kin-dynasty">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <div id="greatwalllink" style="position:absolute;left: 60px;top: 80px;width: 150px;height: 113px;"></div>
+  <div id="terracotaarmylink" style="position:absolute;left: 295px;top: 310px;width: 165px;height: 95px;"></div>
+  <div id="firstemperrorlink" style="position:absolute;left: 50px;top: 480px;width: 188px;height: 110px;"></div>
+  <div id="thegrandplanlink" style="position:absolute;left: 335px;top: 585px;width: 180px;height: 125px;"></div>
+    
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-UnificationKinDynasty">
+		<p>Thanks to reforms put in place earlier by a minister named Shang Yang, the Qin state managed to use its resources much more efficiently than its rivals.  It eventually became the most influential power of the last seven kingdoms in China.</p>
+		<p>Qin conducted many wars  and won almost all of them!  during the final Zhou period.  By 236 BCE, one last great war led to the two remaining kingdoms being brought together into one in 221 BCE.  King Zheng took the title of Qin Shi Huangdi  which means the 'First Sovereign Emperor of the Qin'.</p>
+		<p>The Chinese Empire lasted for more than 2000 years until 1912, when the last emperor, Puyi, <a href="#abdicated" data-rel="popup">abdicated</a>.</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopUnificationKinDynasty"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="UnificationKinDynastyaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="UnificationKinDynastyaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="UnificationKinDynastyaudiofbtn"></div></div>
+    <div id="actualaudio-UnificationKinDynasty" style="visibility:hidden;"></div>
+  <!--</div>-->
+  
+  <!------------------------------------- Definition box ----------------------------------- -->
+  	<div data-role="popup" id="abdicated" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Abdicated</p>
+			<p>Abdicated means to give up a highly regarded position, such as a king or queen, or in this case an emperor.</p>
+		</div>
+	</div>
+  <!-- ------------------------------------------------------------------------------------- -->
+  
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-UnificationKinDynasty').html('<audio id="UnificationKinDynastyaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Unification_Kin_Dynasty.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-unification-and-the-kin-dynasty").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#greatwalllink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-unification-and-the-kin-dynasty-the-great-wall.html", {transition: "slide"});
+    });
+	$('#terracotaarmylink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-unification-and-the-kin-dynasty-terracotta-army.html", {transition: "slide"});
+    });
+	$('#firstemperrorlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-unification-and-the-kin-dynasty-first-emperror.html", {transition: "slide"});
+    });
+	$('#thegrandplanlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-unification-and-the-kin-dynasty-the-grand-plan.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopUnificationKinDynasty").on('tap', function() {
+      if(!playing) {
+        UnificationKinDynastyaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        UnificationKinDynastyaudio.pause(); UnificationKinDynastyaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#UnificationKinDynastyaudioplbtn").on('tap', function() {
+      if(!paused) {
+        UnificationKinDynastyaudio.pause();
+        paused = true;
+      } else {
+        UnificationKinDynastyaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#UnificationKinDynastyaudiofbtn").on('tap', function() {
+      var ctime = UnificationKinDynastyaudio.currentTime;
+      UnificationKinDynastyaudio.currentTime = ctime + 10;
+    });
+    
+    $("#UnificationKinDynastyaudiobbtn").on('tap', function() {
+      var ctime = UnificationKinDynastyaudio.currentTime;
+      UnificationKinDynastyaudio.currentTime = ctime - 10;
+    });
+    
+    $("#UnificationKinDynastyaudiopsbtn").on('tap', function() {
+      UnificationKinDynastyaudio.pause();
+    });
+  </script>
+</div> <!--//home-->

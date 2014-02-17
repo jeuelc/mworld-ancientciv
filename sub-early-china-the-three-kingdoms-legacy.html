@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-the-three-kingdoms-legacy">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <!-- <div id="belovedlink" style="position:absolute;left: 72px;top: 518px;width: 190px;height: 155px;"></div>
+  <div id="buddhismlink" style="position:absolute;left: 310px;top: 505px;width: 190px;height: 170px;"></div>
+  <div id="gettinggoodslink" style="position:absolute;left: 549px;top: 505px;width: 190px;height: 175px;"></div>
+  <div id="legacylink" style="position:absolute;left: 790px;top: 503px;width: 183px;height: 173px;"></div> -->
+    
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-Legacy">
+		<p>The Three Kingdoms and late Han periods are notable for their chaos and bloodshed, but also for their cultural creativity.  Advances were made and new ideas developed in art, science, mathematics and many other areas.  New and exciting things arrived in China every day from along the Silk Road and across the seas.</p>
+		<p>The cultural debt owed by modern China to early China is enormous.  Some of its most celebrated literature and art dates from the Han and Three Kingdoms periods, and modern movie versions of 'Romance of the Three Kingdoms' pull in huge audiences.</p>
+		<p>Chinese culture has continued now, although with many changes, for thousands of years.  For example, popular culture in today's movies and television (and even video games!) can be traced back through classical opera and right back to the novels and poetry of early China.</p>
+		<p>Early China brought advances in writing, science, technology, roads, currencies, trade, new political structures and more that helped to create the Chinese civilisation that continues and thrives today.</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopLegacy"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="Legacyaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="Legacyaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="Legacyaudiofbtn"></div></div>
+    <div id="actualaudio-Legacy" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-Legacy').html('<audio id="Legacyaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Legacy.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-the-three-kingdoms-legacy").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#belovedlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-the-three-kingdoms-legacy-a-beloved-battle.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china-the-three-kingdoms.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopLegacy").on('tap', function() {
+      if(!playing) {
+        Legacyaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        Legacyaudio.pause(); Legacyaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#Legacyaudioplbtn").on('tap', function() {
+      if(!paused) {
+        Legacyaudio.pause();
+        paused = true;
+      } else {
+        Legacyaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#Legacyaudiofbtn").on('tap', function() {
+      var ctime = Legacyaudio.currentTime;
+      Legacyaudio.currentTime = ctime + 10;
+    });
+    
+    $("#Legacyaudiobbtn").on('tap', function() {
+      var ctime = Legacyaudio.currentTime;
+      Legacyaudio.currentTime = ctime - 10;
+    });
+    
+    $("#Legacyaudiopsbtn").on('tap', function() {
+      Legacyaudio.pause();
+    });
+  </script>
+</div> <!--//home-->

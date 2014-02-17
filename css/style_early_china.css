@@ -1,0 +1,573 @@
+/* Main common basic pages */
+#sub-early-china, #sub-early-china-han-dynasty, #sub-early-china-early-days-Rice-and-Early-Agricultural-communities, #sub-early-china-early-days-Shang-Bronzes, #sub-early-china-early-days-Warring-States{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Early_China.jpg') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+/* Custom Pages Style */
+#sub-early-china-early-days{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Early_Days/Early_Days_Bg_new.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-the-three-kingdoms{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/The_three_Kingdoms/The_Three_Kingdom.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-unification-and-the-kin-dynasty{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Unification_And_The_Qin_Dynasty/Unification.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-early-days-Zhou-Bronzes{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Early_Days/Zhou_Bronzes/Zhou_Bronzes.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-han-dynasty-art-and-music{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty/Art_And_Music/Art_And_Music_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-han-dynasty-inventive-genius{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty/Inventive_Genius/Inventive_Genius.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-the-three-kingdoms-getting-the-goods{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/The_three_Kingdoms/Getting_The_Goods/Getting_The_Goods_BG.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-the-three-kingdoms-legacy{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/The_three_Kingdoms/Legacy/Legacy.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+#sub-early-china-unification-and-the-kin-dynasty-terracotta-army{
+  background:url('images/9-12/Ancient_Civilizations/Early_China/Unification_And_The_Qin_Dynasty/Terracotta_Army/Terracotta_Army.png') no-repeat;
+  height:748px !important;
+  overflow:hidden !important;
+  width:1024px !important;
+}
+
+.plEarlyChina, .psEarlyChina, .bEarlyChina, .fEarlyChina {
+  position:absolute;
+  top:670px;
+  left:1024px;
+  z-index:20;
+}
+
+.micbtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/micac.png') no-repeat 0 -81px;
+  height:81px;
+  width:81px;
+}
+
+.rwEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/rwac.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.plpsEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/playac.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.fwEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/fwac.png') no-repeat 0 -73px;
+  height:73px;
+  width:73px;
+}
+
+.menubtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/menuac.png') no-repeat 0 -90px;
+  height:90px;
+  width:90px;
+}
+
+
+.homebtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/mapac.png') no-repeat 0 -74px;
+  height:74px;
+  width:80px;
+}
+
+.mpbtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/mpointsac.png') no-repeat 0 -84px;
+  height:79px;
+  width:80px;
+}
+
+.cpbtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/ctrlpnlac.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.infobtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/infoac.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+
+.credsbtnEarlyChina {
+  background:url('images/9-12/Ancient_Civilizations/creditsac.png') no-repeat 0 -74px;
+  height:74px;
+  width:74px;
+}
+/* Common Button Design Ends Here */
+
+
+.navEarlyChina-content {
+	position: absolute;
+	left: 305px;
+	top: 275px;
+	width: 410px;
+	height: 359px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Some pages needs different style for text content */
+.navEarlyChina-looingup {
+	position: absolute;
+	left: 305px;
+	top: 346px;
+	width: 410px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: "comic sans ms";
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChinabtn1{
+	left: 134px;
+    position: absolute;
+    top: 405px;
+}
+
+.navEarlyChinabtn2 {
+    left: 394px;
+    position: absolute;
+    top: 435px;
+}
+.navEarlyChinabtn3 {
+    left: 657px;
+    position: absolute;
+    top: 405px;
+}
+
+.bpcontentEarlyChina{
+	color: #000000;
+    font-family: "comic sans ms";
+    font-size: 18px;
+    font-weight: normal;
+    height: 356px;
+    left: 550px;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 266px;
+    width: 413px;
+}
+
+.navEarlyChina-content3{
+  position:absolute;
+  left:59px;
+  top:263px;
+  width:920px;
+  height:160px;
+  overflow-y:scroll;
+  text-align:left;
+  font-family:"comic sans ms";
+  font-size:18px;
+  font-weight:normal;
+  color:#000000;
+}
+
+/* Custom content */
+
+.navEarlyChina-EarlyDays{
+	position: absolute;
+	left: 82px;
+	top: 70px;
+	width: 885px;
+	height: 155px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-TheThreeKingdoms{
+	position: absolute;
+	left: 35px;
+	top: 71px;
+	width: 405px;
+	height: 395px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-UnificationKinDynasty{
+	position: absolute;
+	left: 551px;
+	top: 155px;
+	width: 430px;
+	height: 468px;
+	overflow: auto;
+	text-align: right;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-ZhouBronzes{
+	position: absolute;
+	left: 105px;
+	top: 95px;
+	width: 805px;
+	height: 250px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-ArtAndMusic{
+	position: absolute;
+	left: 525px;
+	top: 350px;
+	width: 450px;
+	height: 295px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-InventiveGenius{
+	position: absolute;
+	left: 40px;
+	top: 77px;
+	width: 500px;
+	height: 280px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-GettingTheGoods{
+	position: absolute;
+	left: 92px;
+	top: 440px;
+	width: 850px;
+	height: 235px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-Legacy{
+	position: absolute;
+	left: 265px;
+	top: 88px;
+	width: 495px;
+	height: 275px;
+	overflow: auto;
+	text-align: center;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navEarlyChina-TerracottaArmy{
+	position: absolute;
+	left: 44px;
+	top: 90px;
+	width: 590px;
+	height: 524px;
+	overflow: auto;
+	text-align: left;
+	font-family: comic sans ms;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+			
+/**********flipcard effect**************/
+#f3_container,#f4_container,#f5_container  {
+  position: relative;
+  width: 360px;
+  height: 280px;
+  z-index: 1;
+}
+#f3_container,#f4_container,#f5_container {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+#f3_card,#f4_card,#f5_card{
+  width: 360px;
+  height: 280px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: all 1.0s linear;
+  -o-transform-style: preserve-3d;
+  -o-transition: all 1.0s linear;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+/* Common Header Div Design */
+#sub-early-china .bptitleholder, #sub-early-china-han-dynasty .bptitleholder, #sub-early-china-early-days-Shang-Bronzes .bptitleholder, #sub-early-china-early-days-Warring-States .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+#sub-early-china-early-days-Rice-and-Early-Agricultural-communities .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+/* Custom Header Div Design */
+#sub-early-china-early-days .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-the-three-kingdoms .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-unification-and-the-kin-dynasty .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-early-days-Zhou-Bronzes .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-han-dynasty-art-and-music .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-han-dynasty-inventive-genius .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-the-three-kingdoms-getting-the-goods .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-the-three-kingdoms-legacy .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+#sub-early-china-unification-and-the-kin-dynasty-terracotta-army .bptitleholder{
+	width: 450px;
+	height: 68px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top: 44px;
+	left: 250px;
+}
+
+/* Common Header Design h1 */
+#sub-early-china .bptitleholder h1, #sub-early-china-han-dynasty .bptitleholder h1, #sub-early-china-early-days-Rice-and-Early-Agricultural-communities .bptitleholder h1, #sub-early-china-early-days-Shang-Bronzes .bptitleholder h1, #sub-early-china-early-days-Warring-States .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/* Custom Page Header Design h1 */
+#sub-early-china-early-days .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-the-three-kingdoms .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-unification-and-the-kin-dynasty .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-early-days-Zhou-Bronzes .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-han-dynasty-art-and-music .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-han-dynasty-inventive-genius .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-the-three-kingdoms-getting-the-goods .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-the-three-kingdoms-legacy .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}
+
+#sub-early-china-unification-and-the-kin-dynasty-terracotta-army .bptitleholder h1{
+	text-transform: uppercase;
+	color: #FFFFFF !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;	
+}

@@ -1,0 +1,135 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-early-days-Shang-Bronzes">
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:0px;"><h1>Shang Bronzes</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		
+		<a id="chinesevessellink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Early_China/Early_Days/Shang_Bronzes/Chinese_Tripod_vessel_Hi_Res.jpg', 'A Chinese tripod bronze vessel, called a ding, from the Shang dynasty.  Dings were used for cooking, storage and ceremonial purposes  and their shape inspired the design of the modern Shanghai Museum!  (Courtesy: Sheila Terry/Science Photo Library)');">click here</a>
+		<a id="bronzelink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Early_China/Early_Days/Shang_Bronzes/Bronze_Wine_Vessel_Hi_res.jpg', 'A bronze wine vessel used for ceremonies during  the Shang Dynasty, now located in the Capital Museum in Beijing.  (Courtesy:  TAO Images Limited / Alamy) ');">click here</a>
+		
+		<div id="zoomwrapper">
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Early_China/Early_Days/Shang_Bronzes/Chinese_Tripod_vessel.jpg" alt="" />
+          </div>
+          <div id="pol2" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Early_China/Early_Days/Shang_Bronzes/Bronze_Wine_Vessel.jpg" alt="" />
+          </div>
+		</div><!--/zoomwrapper-->
+	  </div>
+      
+      <div class="bpcontentEarlyChina">
+        <p>By about 3500 years ago, during the Shang Dynasty, masses of bronze vessels had been produced.</p>
+		<p>The technology of metal-working was already developed in China in the Longshan period, some 4200 years ago.  During the Shang period, people adapted the technology of pottery kilns so that they could generate the high temperatures required to melt bronze.  The Shang Chinese made multiple ceramic moulds to cast the bronzes.  Once the bronzes were finished and polished, sophisticated decorations concealed the joint lines between the mould pieces.</p>
+		<p>Bronze vessels were frequently given by kings or high feudatories (a feudatory is a type of land owner) to their subordinates, and these people often indicated their status with inscriptions.  It made Shang aristocrats feel special to possess such artefacts, and they used them in special banquets to honour their ancestors.</p>
+		<p>Anyang, the ancient city of Yin, was the capital of the Shang kingdom.  In the early 20th century, archaeological excavations uncovered thousands of inscriptions on bones and ritual bronze items, and also evidence of human sacrifices!</p>
+      </div>
+       
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->        
+  
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopShangBronzes"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="ShangBronzesaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="ShangBronzesaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="ShangBronzesaudiofbtn"></div></div>
+    <div id="actualaudio-ShangBronzes" style="visibility:hidden;"></div>
+  <!-- </div> -->
+  
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+ 
+	var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+	  $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      
+	  if(sound.canPlayType('audio/mpeg')) {
+			$('#actualaudio-ShangBronzes').html('<audio id="ShangBronzesaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Shang_Bronzes.mp3" type="audio/mpeg"></audio>');
+	  }             
+	  $("#sub-early-china-early-days-Shang-Bronzes").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+	})();
+    
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+	$("#pol1").on('tap', function() {
+      $('#chinesevessellink')[0].click();
+    });
+	
+	$("#pol2").on('tap', function() {
+      $('#bronzelink')[0].click();
+    });
+	
+	function goBack() {
+      $.mobile.changePage("sub-early-china-early-days.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopShangBronzes").on('tap', function() {
+      if(!playing) {
+        ShangBronzesaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        ShangBronzesaudio.pause(); ShangBronzesaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#ShangBronzesaudioplbtn").on('tap', function() {
+      if(!paused) {
+        ShangBronzesaudio.pause();
+        paused = true;
+      } else {
+        ShangBronzesaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#ShangBronzesaudiofbtn").on('tap', function() {
+      var ctime = ShangBronzesaudio.currentTime;
+      ShangBronzesaudio.currentTime = ctime + 10;
+    });
+    
+    $("#ShangBronzesaudiobbtn").on('tap', function() {
+      var ctime = ShangBronzesaudio.currentTime;
+      ShangBronzesaudio.currentTime = ctime - 10;
+    });
+    
+    $("#ShangBronzesaudiopsbtn").on('tap', function() {
+      ShangBronzesaudio.pause();
+    });
+  </script>
+  <script src="js/threecardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

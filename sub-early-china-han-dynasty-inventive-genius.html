@@ -1,0 +1,112 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-han-dynasty-inventive-genius">
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+    
+  <div class="bptitleholder" style="padding-top:14px;"><h1></h1></div>
+  <!-- <div id="belovedlink" style="position:absolute;left: 72px;top: 518px;width: 190px;height: 155px;"></div>
+  <div id="buddhismlink" style="position:absolute;left: 310px;top: 505px;width: 190px;height: 170px;"></div>
+  <div id="gettinggoodslink" style="position:absolute;left: 549px;top: 505px;width: 190px;height: 175px;"></div>
+  <div id="legacylink" style="position:absolute;left: 790px;top: 503px;width: 183px;height: 173px;"></div> -->
+    
+  <div data-role="content" class="kidzcontent">
+	<div class="navEarlyChina-InventiveGenius">
+		<p>The early Chinese developed many inventions and new technologies.  Cast iron tools were developed during the Zhou period.  During the Han period these technologies were further improved, creating tough cast-iron tools and sturdy ploughs, which allowed farmers to produce more food.  The Han Chinese also figured out how to make steel weapons.  This technology was not developed in Europe until hundreds of years later.</p>
+		<p>The Han Chinese developed paper made from hemp, and the papermaking process was later perfected by the official Cai Lun in 105 CE.  Before this, the Chinese used to write on animal bones, tortoise shells, bamboo, silk, and bronze vessels.</p>
+		<p>The Han Chinese were also great scientists and mathematicians.  Their most notable astronomer, Zhang Heng, invented a mechanical 'armillary sphere', a model of the Earth and the sky.  Ancient clockworks were later developed from this invention.  He also invented an earthquake-measuring machine, the seismometer.</p>
+		<p>Han Chinese also made many advances in medicine and surgery.  For a foreigner visiting China back then, it would have seemed like travelling to the future!</p>
+    </div>
+    <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+  </div> <!-- end content -->  
+    
+  
+  <!--<div class="audiopanel">-->
+    <!-- images are in slidebarnat.js 
+         note: change the ids to be able play the narration
+    -->
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopInventiveGenius"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="InventiveGeniusaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="InventiveGeniusaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="InventiveGeniusaudiofbtn"></div></div>
+    <div id="actualaudio-InventiveGenius" style="visibility:hidden;"></div>
+  <!--</div>-->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+    var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      if(sound.canPlayType('audio/mpeg')) {
+        $('#actualaudio-InventiveGenius').html('<audio id="InventiveGeniusaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Inventive_Genius.mp3" type="audio/mpeg"></audio>');
+      } 
+    
+      $("#sub-early-china-han-dynasty-inventive-genius").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+    })();
+    
+	$('#belovedlink').on('tap', function() {
+      $.mobile.changePage("sub-early-china-han-dynasty-inventive-genius-a-beloved-battle.html", {transition: "slide"});
+    });
+	
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+    function goBack() {
+      $.mobile.changePage("sub-early-china-han-dynasty.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopInventiveGenius").on('tap', function() {
+      if(!playing) {
+        InventiveGeniusaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        InventiveGeniusaudio.pause(); InventiveGeniusaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#InventiveGeniusaudioplbtn").on('tap', function() {
+      if(!paused) {
+        InventiveGeniusaudio.pause();
+        paused = true;
+      } else {
+        InventiveGeniusaudio.play();
+        paused = false;
+      }
+    });
+    
+    $("#InventiveGeniusaudiofbtn").on('tap', function() {
+      var ctime = InventiveGeniusaudio.currentTime;
+      InventiveGeniusaudio.currentTime = ctime + 10;
+    });
+    
+    $("#InventiveGeniusaudiobbtn").on('tap', function() {
+      var ctime = InventiveGeniusaudio.currentTime;
+      InventiveGeniusaudio.currentTime = ctime - 10;
+    });
+    
+    $("#InventiveGeniusaudiopsbtn").on('tap', function() {
+      InventiveGeniusaudio.pause();
+    });
+  </script>
+</div> <!--//home-->
