@@ -1,0 +1,143 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-unification-and-the-kin-dynasty-the-grand-plan">
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:0px;"><h1>The Grand Plan</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		
+		<a id="pol1link" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Early_China/Unification_And_The_Qin_Dynasty/The_Grand_Plan/Ancient_chinese_money_Hi_Res.jpg', 'This round coin with a square cut out is similar to the Ancient Chinese money that was introduced by Emperor Qin Shi Huangdi.');">click here</a>
+		<a id="pol2link" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Early_China/Unification_And_The_Qin_Dynasty/The_Grand_Plan/Chinese_Writing_Hi_Res.jpg', 'Emperor Qin introduced many new ideas, including a standardised system of writing.  His writing system helped to unify the many languages and dialects of China.');">click here</a>
+		<div id="zoomwrapper">
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Early_China/Unification_And_The_Qin_Dynasty/The_Grand_Plan/Ancient_chinese_money_new.jpg" alt="" />
+          </div>
+          <div id="pol2" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Early_China/Unification_And_The_Qin_Dynasty/The_Grand_Plan/Chinese_Writing_new.jpg" alt="" />
+          </div>
+		</div><!--/zoomwrapper-->
+	  </div>
+      
+      <div class="bpcontentEarlyChina">
+        <p>As part of his grand plan, Emperor Qin Shi Huangdi imposed rules to regulate economic transactions and make tax collection easier.</p>
+		<p>All weights and measures were converted into standard units.  And the currency was standardised: a new round coin with a square hole in the middle was adopted and the old spade-shaped and knife-shaped currency was abolished.</p>
+		<p>Qin Shi Huangdi tackled roads too.  All cart axles had to be the same size to reduce problems with wheel ruts on the roads.</p>
+		<p>Then he turned to writing.  A common script was ordered for all imperial territories so that they could eliminate the many local script variations.  The Chinese writing system has evolved a lot since then but is still very much in use today.  The roots of Chinese writing can be traced back to even earlier times  to early Neolithic inscriptions on bones and tortoise shells.</p>
+      </div>
+       
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->        
+  
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopGrandPlan"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="GrandPlanaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="GrandPlanaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="GrandPlanaudiofbtn"></div></div>
+    <div id="actualaudio-GrandPlan" style="visibility:hidden;"></div>
+  <!-- </div> -->
+  <!------------------------------------- Definition box ----------------------------------- -->
+  
+	<div data-role="popup" id="daoism" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
+		<div id="node-pop">
+			<p>Prefectures</p>
+			<p>Prefectures are similar to provinces, regions or areas within a country.</p>
+		</div>
+	</div>
+  <!-- ------------------------------------------------------------------------------------- -->
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+ 
+	var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol2').css("z-index", 2);
+      $('div#pol1').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
+      
+	  if(sound.canPlayType('audio/mpeg')) {
+			$('#actualaudio-GrandPlan').html('<audio id="GrandPlanaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Grand_Plan.mp3" type="audio/mpeg"></audio>');
+	  }             
+	  $("#sub-early-china-unification-and-the-kin-dynasty-the-grand-plan").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+	})();
+    
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+	$("#pol1").on('tap', function() {
+      $('#pol1link')[0].click();
+    });
+	
+	$("#pol2").on('tap', function() {
+      $('#pol2link')[0].click();
+    });
+	
+	function goBack() {
+      $.mobile.changePage("sub-early-china-unification-and-the-kin-dynasty.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopGrandPlan").on('tap', function() {
+      if(!playing) {
+        GrandPlanaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        GrandPlanaudio.pause(); GrandPlanaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#GrandPlanaudioplbtn").on('tap', function() {
+      if(!paused) {
+        GrandPlanaudio.pause();
+        paused = true;
+      } else {
+        GrandPlanaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#GrandPlanaudiofbtn").on('tap', function() {
+      var ctime = GrandPlanaudio.currentTime;
+      GrandPlanaudio.currentTime = ctime + 10;
+    });
+    
+    $("#GrandPlanaudiobbtn").on('tap', function() {
+      var ctime = GrandPlanaudio.currentTime;
+      GrandPlanaudio.currentTime = ctime - 10;
+    });
+    
+    $("#GrandPlanaudiopsbtn").on('tap', function() {
+      GrandPlanaudio.pause();
+    });
+  </script>
+  <script src="js/twocardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->

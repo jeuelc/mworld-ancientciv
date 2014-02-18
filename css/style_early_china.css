@@ -1,5 +1,5 @@
 /* Main common basic pages */
-#sub-early-china, #sub-early-china-han-dynasty, #sub-early-china-early-days-Rice-and-Early-Agricultural-communities, #sub-early-china-early-days-Shang-Bronzes, #sub-early-china-early-days-Warring-States{
+#sub-early-china, #sub-early-china-han-dynasty, #sub-early-china-early-days-Rice-and-Early-Agricultural-communities, #sub-early-china-early-days-Shang-Bronzes, #sub-early-china-early-days-Warring-States, #sub-early-china-early-days-confucius, #sub-early-china-han-dynasty-opening-up-to-the-west-the-silk-road, #sub-early-china-han-dynasty-silk, #sub-early-china-the-three-kingdoms-a-beloved-battle, #sub-early-china-the-three-kingdoms-Buddhism, #sub-early-china-unification-and-the-kin-dynasty-first-emperror, #sub-early-china-unification-and-the-kin-dynasty-the-grand-plan, #sub-early-china-unification-and-the-kin-dynasty-the-great-wall{
   background:url('images/9-12/Ancient_Civilizations/Early_China/Early_China.jpg') no-repeat;
   height:748px !important;
   overflow:hidden !important;
@@ -369,11 +369,21 @@
 }
 
 /* Common Header Div Design */
-#sub-early-china .bptitleholder, #sub-early-china-han-dynasty .bptitleholder, #sub-early-china-early-days-Shang-Bronzes .bptitleholder, #sub-early-china-early-days-Warring-States .bptitleholder{
+#sub-early-china .bptitleholder, #sub-early-china-han-dynasty .bptitleholder, #sub-early-china-early-days-Shang-Bronzes .bptitleholder, #sub-early-china-early-days-Warring-States .bptitleholder, #sub-early-china-early-days-confucius .bptitleholder, #sub-early-china-han-dynasty-silk .bptitleholder, #sub-early-china-the-three-kingdoms-a-beloved-battle .bptitleholder, #sub-early-china-the-three-kingdoms-Buddhism .bptitleholder, #sub-early-china-unification-and-the-kin-dynasty-first-emperror .bptitleholder, #sub-early-china-unification-and-the-kin-dynasty-the-grand-plan .bptitleholder, #sub-early-china-unification-and-the-kin-dynasty-the-great-wall .bptitleholder{
 	width: 627px;
 	height: 68px;
 	text-align: center;
 	line-height: 28px;
+	position: absolute;
+	top: 170px;
+	left: 194px;
+}
+
+#sub-early-china-han-dynasty-opening-up-to-the-west-the-silk-road .bptitleholder{
+	width: 627px;
+	height: 68px;
+	text-align: center;
+	line-height: 38px;
 	position: absolute;
 	top: 170px;
 	left: 194px;
@@ -481,7 +491,7 @@
 }
 
 /* Common Header Design h1 */
-#sub-early-china .bptitleholder h1, #sub-early-china-han-dynasty .bptitleholder h1, #sub-early-china-early-days-Rice-and-Early-Agricultural-communities .bptitleholder h1, #sub-early-china-early-days-Shang-Bronzes .bptitleholder h1, #sub-early-china-early-days-Warring-States .bptitleholder h1{
+#sub-early-china .bptitleholder h1, #sub-early-china-han-dynasty .bptitleholder h1, #sub-early-china-early-days-Rice-and-Early-Agricultural-communities .bptitleholder h1, #sub-early-china-early-days-Shang-Bronzes .bptitleholder h1, #sub-early-china-early-days-Warring-States .bptitleholder h1, #sub-early-china-early-days-confucius .bptitleholder h1, #sub-early-china-han-dynasty-opening-up-to-the-west-the-silk-road .bptitleholder h1, #sub-early-china-han-dynasty-silk .bptitleholder h1, #sub-early-china-the-three-kingdoms-a-beloved-battle .bptitleholder h1, #sub-early-china-the-three-kingdoms-Buddhism .bptitleholder h1, #sub-early-china-unification-and-the-kin-dynasty-first-emperror .bptitleholder h1, #sub-early-china-unification-and-the-kin-dynasty-the-grand-plan .bptitleholder h1, #sub-early-china-unification-and-the-kin-dynasty-the-great-wall .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;

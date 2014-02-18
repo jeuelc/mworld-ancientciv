@@ -1,0 +1,134 @@
+<!-- i-C-a -->
+<div data-role="page" id="sub-early-china-han-dynasty-opening-up-to-the-west-the-silk-road">
+  <script src="js/hammer.js"></script>
+  <script src="js/jquery.hammer.js"></script>
+  <script src="js/slidebar_early_china.js"></script>
+  <link rel="stylesheet" href="css/style_early_china.css" />
+  <div class="menuhousing"></div>
+  <div class="homebtnholder"><div class="homebtnEarlyChina"></div></div>
+  <div class="mpbtnholder"><div class="mpbtnEarlyChina"></div></div>
+  <div class="cpbtnholder"><div class="cpbtnEarlyChina"></div></div>
+  <div class="infobtnholder"><div class="infobtnEarlyChina"></div></div>
+  <div class="credsbtnholder"><div class="credsbtnEarlyChina"></div></div>
+  <div class="menubtnholder"><div class="menubtnEarlyChina"></div></div>
+  
+  <div class="bptitleholder" style="padding-top:0px;"><h1>Opening up to the West - the Silk Road</h1></div>
+  <div id="spacechar">&nbsp;
+    <div data-role="content" class="kidzcontent">
+      <div class="v-spacer"></div>
+      <div class="sidebarleft-half">
+		
+		<a id="horselink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty/Opening_Up_To_The_West/Horse_On_The_Silk_road_hi_res.jpg', 'Traders and horses on a route connected to the historical Silk Road in China.  Many parts of the Silk Road would have involved crossing difficult terrain like this.  (Courtesy: Tao Limited / Alamy)');">click here</a>
+		<a id="ancientlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty/Opening_Up_To_The_West/Ancient_Ruins_along_Silk_road_hi_res.jpg', 'Ruins of the Silk Road city of Jiaohe can be found along the Yarnaz Valley in Xinjiang Province, China.  (Courtesy: Cultura RM / Alamy)');">click here</a>
+		
+		<div id="zoomwrapper">
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty/Opening_Up_To_The_West/Horse_On_The_Silk_road_new.jpg" alt="" />
+          </div>
+          <div id="pol2" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Early_China/Han_Dynasty/Opening_Up_To_The_West/Ancient_Ruins_along_Silk_road_new.jpg" alt="" />
+          </div>
+		</div><!--/zoomwrapper-->
+	  </div>
+      
+      <div class="bpcontentEarlyChina">
+        <p>The Han were responsible for opening up the Silk Road, a long network of trade routes between Europe, India and China.  This involved a lot of long, very violent military campaigns against a nomadic people known in China as the Xiongnu and in Europe as the Huns.</p>
+		<p>In the 2nd century BCE, a Han envoy named Zhang Qian spent many years travelling through Central Asia, including ten years as a hostage after he was caught by the Huns, in areas that would later become part of the Silk Road network.  On his second expedition to Central Asia, Zhang Qian was able to secure a good herd of superb horses to fight the nomads.</p>
+		<p>After almost a century of occasional warfare and fighting, the Han eventually managed to chase the Huns out of western China.  The Silk Road was now open for business!  Trade flourished between Asia and Europe, and the Han Empire made fabulous profits from taxing traders and merchants who did business along the Silk Road.</p>
+      </div>
+       
+      <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
+    </div> <!-- end content -->  
+  </div><!--/spacechar-->        
+  
+    <div class="micbtnholder"><div class="micbtnEarlyChina" id="playstopOpeningUpSilkRoad"></div></div>
+    <div class="bEarlyChina"><div class="rwEarlyChina" id="OpeningUpSilkRoadaudiobbtn"></div></div>
+    <div class="plEarlyChina"><div class="plpsEarlyChina" id="OpeningUpSilkRoadaudioplbtn"></div></div>
+    <div class="fEarlyChina"><div class="fwEarlyChina" id="OpeningUpSilkRoadaudiofbtn"></div></div>
+    <div id="actualaudio-OpeningUpSilkRoad" style="visibility:hidden;"></div>
+  <!-- </div> -->
+  
+  <script>
+  // sound setup is in home.html and index.js
+    sound = new Audio(); // 'sound' is now an audio object
+ 
+	var playing;
+    var paused;
+    (function() {
+      playing = false;
+      paused = true;
+      $('div#pol1').css("z-index", 2);
+      $('div#pol2').css("z-index", 1);
+      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+	  $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      
+	  if(sound.canPlayType('audio/mpeg')) {
+			$('#actualaudio-OpeningUpSilkRoad').html('<audio id="OpeningUpSilkRoadaudio" controls preload onpause="playsEarlyChina()" onplay="pauseEarlyChina()"><source src="audio/Early_China/Opening_Up_Silk_Road.mp3" type="audio/mpeg"></audio>');
+	  }             
+	  $("#sub-early-china-han-dynasty-opening-up-to-the-west-the-silk-road").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
+	})();
+    
+	$('.homelinkbh').on('tap', function() { mainaudiobg.play(); bgsoundEarlyChina.pause(); bgsoundEarlyChina.currentTime = 0;});
+    
+	$("#pol1").on('tap', function() {
+      $('#horselink')[0].click();
+    });
+	
+	$("#pol2").on('tap', function() {
+      $('#ancientlink')[0].click();
+    });
+	
+	function goBack() {
+      $.mobile.changePage("sub-early-china-han-dynasty.html", {transition: "slide", reverse: true });
+    }
+    
+    function playsEarlyChina() {
+         bgsoundEarlyChina.play();
+    }
+       
+    function pauseEarlyChina() {
+         bgsoundEarlyChina.pause();
+    }
+    /* ******************** */
+    /* this is the microphone button */
+    $("#playstopOpeningUpSilkRoad").on('tap', function() {
+      if(!playing) {
+        OpeningUpSilkRoadaudio.play();
+        $('.micbtnEarlyChina').css('background-position-x', '-81px');
+        playing = true;
+        paused = false;
+      } else {
+        OpeningUpSilkRoadaudio.pause(); OpeningUpSilkRoadaudio.currentTime = 0;
+        $('.micbtnEarlyChina').css('background-position-x', '0px');
+        playing = false;
+        paused = true;
+      }
+    });
+    
+    $("#OpeningUpSilkRoadaudioplbtn").on('tap', function() {
+      if(!paused) {
+        OpeningUpSilkRoadaudio.pause();
+        paused = true;
+      } else {
+        OpeningUpSilkRoadaudio.play();
+        paused = false;
+      }
+      //$(".audiopanel").css({"backgroundPosition":"-197px 0px"});
+    });
+    
+    $("#OpeningUpSilkRoadaudiofbtn").on('tap', function() {
+      var ctime = OpeningUpSilkRoadaudio.currentTime;
+      OpeningUpSilkRoadaudio.currentTime = ctime + 10;
+    });
+    
+    $("#OpeningUpSilkRoadaudiobbtn").on('tap', function() {
+      var ctime = OpeningUpSilkRoadaudio.currentTime;
+      OpeningUpSilkRoadaudio.currentTime = ctime - 10;
+    });
+    
+    $("#OpeningUpSilkRoadaudiopsbtn").on('tap', function() {
+      OpeningUpSilkRoadaudio.pause();
+    });
+  </script>
+  <script src="js/twocardLogic.js"></script>  <!-- for card dragging effects -->
+</div> <!--//home-->
