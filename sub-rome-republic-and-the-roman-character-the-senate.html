@@ -18,12 +18,55 @@
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
+			<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+			  <div id="f1_card">
+				<div class="front face">
+				  <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Roman_Assembly.png">
+				</div>
+				<div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Rome_Assembly_Reverse.png) no-repeat;">
+				  <div class="returncard1" style="position:absolute;left: 140px;top: 0px;width: 98px;height: 54px;"></div>
+				  <div id="trueans_card1" style="position:absolute;left: 60px;top: 168px;width: 113px;height: 30px;"></div>
+				  <div id="falseans1_card1" style="position:absolute;left: 60px;top: 203px;width: 115px;height: 30px;"></div>
+				  <div id="falseans2_card1" style="position:absolute;left: 198px;top: 168px;width: 109px;height: 30px;"></div>
+				  <div id="falseans3_card1" style="position:absolute;left: 196px;top: 204px;width: 115px;height: 30px;"></div>
+				  <div id="Light_Box_Image" style="position:absolute;left: 45px;top: 80px;width: 282px;height: 70px;"></div>
+				</div>
+			  </div><!--/f1+card-->
+			</div><!--/f1_container-->
+			
+			<div id="f2_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+			  <div id="f2_card">
+				<div class="front face">
+				  <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Rome_Divided.png">
+				</div>
+				<div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Rome_Divided_Reverse.png) no-repeat;">
+				  <div class="returncard2" style="position:absolute;left: 140px;top: 0px;width: 98px;height: 54px;"></div>
+				  <div id="trueans_card2" style="position:absolute;left: 60px;top: 168px;width: 113px;height: 30px;"></div>
+				  <div id="falseans1_card2" style="position:absolute;left: 60px;top: 203px;width: 115px;height: 30px;"></div>
+				  <div id="falseans2_card2" style="position:absolute;left: 198px;top: 168px;width: 109px;height: 30px;"></div>
+				  <div id="falseans3_card2" style="position:absolute;left: 196px;top: 204px;width: 115px;height: 30px;"></div>
+				  <div id="Light_Box_Image" style="position:absolute;left: 45px;top: 80px;width: 282px;height: 70px;"></div>
+				</div>
+			  </div><!--/f1+card-->
+			</div><!--/f2_container-->
+		
 			<div id="zoomwrapper">
-
+			  <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Roman_Assembly.png" alt="" />
+			  </div>
+			  <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Rome_Divided.png" alt="" />
+			  </div>
+			  <div id="pol3"class="pPiece" style="left:80px;top:270px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/The_Senate/Spqr.png" alt="" />
+			  </div>
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
-        <p>Description Not available. <a href="#magisterial" data-rel="popup">magisterial</a> </p>
+        <p>The Senate was the main assembly of the Roman Republic.  The people in it were those who had previously been elected in <a href="#magisterial" data-rel="popup">magisterial</a> positions.  It passed decrees called 'senatus consulta', which were formal recommendations to the various magistrates and especially the two consuls.</p>
+		<p>The Senate took its authority from tradition  there was no actual law that said 'You are the boss!'  But the Senate could control the military affairs of the city and when Rome expanded its power, it also supervised how the provinces were run.  Importantly, it was the Senate which appointed a dictator, that is, a governor entrusted with special powers to deal with urgent political crises.  Later, the Senate gave these special powers to the consuls instead. The place where the Senate met was called the 'Curia' and the first one was built by the legendary king Tullus Hostilius in the mid-7th century BCE.</p>
+		<p>Under the Roman Empire, the Senate still operated, but it was controlled by the emperor.
+Nowadays, the term Senate is used by the American, British, and Australian constitutions with varying meanings.</p>
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
@@ -31,8 +74,8 @@
   	<!------------------------------------- Definition box ----------------------------------- -->
 	<div data-role="popup" id="magisterial" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
 		<div id="node-pop">
-			<p>Magisteriale</p>
-			<p>Being elected to a Magisterial position, is one of authority and importance.  </p>
+			<p>Magisterial</p>
+			<p>Being elected to a Magisterial position means you are entrusted with a role in the government of the ancient city.  See our Magistrates and Cursus Honorum screen for a list of the positions available in the Roman government.</p>
 		</div>
     </div>
 	<!---------------------------------------------------------------------------------------- -->      
@@ -49,14 +92,15 @@
     sound = new Audio(); // 'sound' is now an audio object
     var playing;
     var paused;
-    (function() {
+	(function() {
       playing = false;
       paused = true;
 	  //Card Rotations
-      $('div#pol1').css("z-index", 2);
-      $('div#pol2').css("z-index", 1);
-      $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
+      $('div#pol2').css("z-index", 2);
+	  $('div#pol1').css("z-index", 1);
+	  $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
+	  $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+	  $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");	  
 	  
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-TheSenate').html('<audio id="TheSenateaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/The_Senate.mp3" type="audio/mpeg"></audio>');
@@ -67,7 +111,77 @@
     
     $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
     
-    function goBack() {
+	$('#falseans1_card1').on('tap', function() {
+      alert("Wrong answer");
+    });
+	$('#falseans2_card1').on('tap', function() {
+      alert("Wrong answer");
+    });
+	$('#falseans3_card1').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans_card1').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+	$(".returncard1").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":4});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });
+	
+	$('#falseans1_card2').on('tap', function() {
+      alert("Wrong answer");
+    });
+	$('#falseans2_card2').on('tap', function() {
+      alert("Wrong answer");
+    });
+	$('#falseans3_card2').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans_card2').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard2").on('tap', function() {
+      $('#f2_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f2_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f2_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f2_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol2").css({"visibility":"visible", "z-index":4});
+        $('#f2_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol2").on('tap', function() {
+      $('#f2_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f2_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f2_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f2_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f2_card').css({"transform": "rotateY(180deg)"});
+    });
+	
+	$("#pol3").on('tap', function() {
+      $.mobile.changePage("sub-rome-republic-and-the-roman-character-the-senate-spqr.html", {transition: "slide"});
+    });
+	
+	function goBack() {
       $.mobile.changePage("sub-rome-republic-and-the-roman-character.html", {transition: "slide", reverse: true });
     }
     
@@ -124,5 +238,5 @@
 	//Pol On click Actions
 	
   </script>
-  <script src="js/twocardLogic.js"></script>
+  <script src="js/threecardLogic.js"></script>
 </div> <!--//home-->

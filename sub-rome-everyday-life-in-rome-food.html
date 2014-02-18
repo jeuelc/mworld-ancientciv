@@ -18,17 +18,26 @@
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
+        <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Food/Banquet_1_Hi_Res.png', 'A Roman fresco of a banquet from the 1<sup>st </sup>century BCE.  Now at the Museo Nazionale Terme, Rome.  (Courtesy:  Credit Line / The Art Archive / Alamy)');">click here</a>		
+        <a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Food/Banquet_2_Hi_Res.png', 'A Roman pavement mosaic showing a banquet with musicians from around the 1<sup>st</sup> century CE.  (Courtesy:  The Art ARchive / Alamy)');">click here</a>		
 			<div id="zoomwrapper">
-
+			  <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Food/Banquet_1.png" alt="" />
+			  </div>
+			  <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Food/Banquet_2.png" alt="" />
+			  </div>
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
         <p>In early Rome people ate mostly soup and boiled meats, and they didn't bake bread (the Roman fascination with bread starts after 300 BCE).  
-		It took a lot of labour to prepare Roman food.  Imagine you're helping.  First you have to grind flour between two heavy stones, and then sift it.  Then, you'd use a pestle and mortar (special grinding bowl and stick) to crush nuts or herbs.  Most Romans liked their food spicy with a lot of pepper.</p>  
+		It took a lot of labour to prepare Roman food.  Imagine you're helping.  First you have to grind flour between two heavy stones, and then sift it.  Then, you'd use a pestle and mortar (special grinding bowl and stick) to crush nuts or herbs.  Most Romans liked their food spicy with a lot of pepper.  </p>
 
-		<p>Utensils made of iron were very expensive, so the average Roman used bronze knives and spoons.  Forks were not used by the Romans, who often ate with their fingers.  Plates for the average Roman were made of wood or pottery, while the rich ate from metal plates of tin, bronze or pewter. </p>
+		 <p>Utensils made of iron were very expensive, so the average Roman used bronze knives and spoons.  Forks were not used by the Romans, who often ate with their fingers.  Plates for the average Roman were made of wood or pottery, while the rich ate from metal plates of tin, bronze or pewter. </p>
 
-		<p>Romans didn't use soap so the cleaning of the bowls was done by rinsing with water.  Metal dishes and utensils were cleaned by rubbing sand on them and then rinsing with water.</p>
+		 <p>Romans didn't use soap so the cleaning of the bowls was done by rinsing with water.  Metal dishes and utensils were cleaned by rubbing sand on them and then rinsing with water.
+
+		</p>
 
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
@@ -55,7 +64,7 @@
       $('div#pol1').css("z-index", 2);
       $('div#pol2').css("z-index", 1);
       $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
 	  
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-Food').html('<audio id="Foodaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Food.mp3" type="audio/mpeg"></audio>');
@@ -121,7 +130,12 @@
     });
 	
 	//Pol On click Actions
-	
+    $("#pol1").on('tap', function() {
+      $('#img1')[0].click();
+    });		
+    $("#pol2").on('tap', function() {
+      $('#img2')[0].click();
+    });	
   </script>
   <script src="js/twocardLogic.js"></script>
 </div> <!--//home-->

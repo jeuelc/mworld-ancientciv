@@ -18,12 +18,20 @@
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
+			<a id="romanlink" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/Magistrates_And_The_Roman_Character/A_Roman_Triumph_hi_res.png', 'The triumph of Julius Caesar.  A Roman Triumph was a military parade approved by the Senate for the generals who had achieved exceptional military victories.  (Courtesy:  GL Archive / Alamy)');">click here</a>
 			<div id="zoomwrapper">
-
+				<div id="pol1" class="pPiece" style="left:100px;top:270px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Republic_And_The_Roman_Character/Magistrates_And_The_Roman_Character/A_Roman_Triumph.png" alt="" />
+				</div>
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
-        <p>Description Not available.</p>
+        <p>The 'Cursus Honorum'  it's not about cursing! It refers to the way ambitious Roman politicians competed with each other to climb the ladder of political office in the Roman Republic before becoming senators.  It means 'Race for the Honours'!</p>
+		<p>The top job was the consul.  There were two, and they could make laws, act as generals in military campaigns, and represent Rome in foreign affairs.</p>
+		<p>On the next rung were eight 'praetors' who served mostly as judges in law courts.</p>
+		<p>Then, there were two 'censors' who updated lists of senators and nobles and conducted the census of citizens and property assessments for tax purposes.</p>
+		<p>Below that were four 'aediles'. These officials looked after public places, public games and the grain supply in Rome.  Two of them had to be plebeians.  The 10 tribunes on the next rung down also had to be plebeian, because the office was established to protect the plebeians from unfair actions of magistrates.</p>
+		<p>The lowest office was that of quaestor.  There were 20 quaestors, and they administered the finances of the state treasury and served in the provinces.</p>
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
@@ -64,6 +72,10 @@
       $.mobile.changePage("sub-rome-republic-and-the-roman-character.html", {transition: "slide", reverse: true });
     }
     
+	$("#pol1").on('tap', function() {
+      $('#romanlink')[0].click();
+    });
+	
     function playsRome() {
          bgsoundRome.play();
     }
@@ -117,5 +129,5 @@
 	//Pol On click Actions
 	
   </script>
-  <script src="js/twocardLogic.js"></script>
+  <script src="js/onecardLogic.js"></script>
 </div> <!--//home-->

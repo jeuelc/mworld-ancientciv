@@ -13,20 +13,46 @@
   <div class="credsbtnholder"><div class="credsbtnRome"></div></div>
   <div class="menubtnholder"><div class="menubtnRome"></div></div>
   
-  <div class="bptitleholder" style="padding-top:14px;"><h1>Etruscans</h1></div>
+  <div class="bptitleholder" style="padding-top:14px;"><h1>The Etruscans</h1></div>
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
-			<div id="zoomwrapper">
-
-			</div><!--/zoomwrapper-->			
+        <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+          <div id="f1_card">
+            <div class="front face">
+              <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/An_Agrarian_People.png">
+            </div>
+            <div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/An_Agrarian_People_Reverse.png) no-repeat;">
+              <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+              <div id="trueans" style="position:absolute;left: 53px;top: 167px;width: 120px;height: 31px;"></div>
+              <div class="falseans" style="position:absolute;left: 190px;top: 167px;width: 120px;height: 31px;"></div>
+			  <div class="falseans" style="position:absolute;left: 53px;top: 202px;width: 120px;height: 31px;"></div>
+			  <div class="falseans" style="position:absolute;left: 190px;top: 202px;width: 120px;height: 31px;"></div>
+            </div>
+          </div><!--/f1+card-->
+        </div><!--/f1_container-->		
+        <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/Etruscans_1_Hi_Res.png', 'A copy of a 5th century BCE fresco (a form of mural) of Etruscan musicians.  The fresco is located from the Tomb of the Leopards, an Etruscan burial chamber.  (Courtesy:  The Art Gallery Collection / Alamy)');">click here</a>
+		
+		<a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/Etruscans_2_Hi_Res.png', 'The image shows the Etruscans being stopped by Horatius at the bridge entrance to Rome.  (Courtesy:  Ivy Close Images / Alamy)');">click here</a>		
+		<div id="zoomwrapper">
+          <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/An_Agrarian_People.png" alt="" />
+          </div>
+          <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/Etruscans_1.png" alt="" />
+          </div>
+		  <div id="pol3"class="pPiece" style="left:80px;top:270px;">
+             <img src="css/images/9-12/Ancient_Civilizations/Rome/Early_Rome/Etruscans/Etruscans_2.png" alt="" />
+          </div>
+        </div><!--/zoomwrapper-->		
 		</div>
       <div class="bpcontentRome">
-        <p>No one knows for sure where the Etruscans came from  it's still a mystery!  But archaeologists suspect they came from the eastern Mediterranean, possibly Asia Minor.  The Etruscans brought to Italy a more urban way of living.  They lived in independent, fortified city-states that formed small 'confederacies'  you could think of them as a group of friendly states. </p>
-		<p>The Latins who founded Rome were an Italic people who lived in a small village south of the Tiber River, and cultivated the land.  They were tribal people and you can see that 'tribal' way of organising society throughout Roman history.  However, as they steadily developed their city, its government and its culture, they imitated the neighbouring civilization to the north, the Etruscans.  The Etruscans reacted by taking them over!  </p>
- 
-		<p>Livy, a Roman historian writing much later, (first century BCE) recorded the myth that Rome was founded by Romulus and Remus, but he also recorded the tragic story of the expulsion of the Etruscan kings.  Both tales tell of the desire for power that shaped Roman history, but, also, the toll of blood that Rome had to pay for it.</p>
+        <p>No one knows for sure where the Etruscans came from  it's still a mystery!  But archaeologists suspect they came from the eastern Mediterranean, possibly Asia Minor.  The Etruscans brought to Italy a more urban way of living.  They lived in independent, fortified city-states that formed small 'confederacies'  you could think of them as a group of friendly states.</p>
+
+		<p>The Latins who founded Rome were an Italic people who lived in a small village south of the Tiber River and cultivated the land.  They were tribal people and you can see that 'tribal' way of organising society throughout Roman history.  However, as they steadily developed their city, its government and its culture, they imitated the neighbouring civilization to the north, the Etruscans.  The Etruscans reacted by taking them over!</p>
+
+		<p>Livy, a Roman historian writing much later (first century BCE: Before Common Era), recorded the myth that Rome was founded by Romulus and Remus, as well as the tragic story of the expulsion of the Etruscan kings.  Both tales tell of the desire for power that shaped Roman history, but, also, the toll of blood that Rome had to pay for it.</p>
 
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
@@ -50,11 +76,11 @@
       playing = false;
       paused = true;
 	  //Card Rotations
-      $('div#pol1').css("z-index", 2);
-      $('div#pol2').css("z-index", 1);
+      $('div#pol2').css("z-index", 2);
+      $('div#pol1').css("z-index", 1);
       $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
-	  
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-Etruscans').html('<audio id="Etruscansaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Etruscans.mp3" type="audio/mpeg"></audio>');
       } 
@@ -119,7 +145,40 @@
     });
 	
 	//Pol On click Actions
-	
+
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":4});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });
+
+    $("#pol2").on('tap', function() {
+      $('#img1')[0].click();
+    });
+	$("#pol3").on('tap', function() {
+      $('#img2')[0].click();
+    });	
   </script>
-  <script src="js/twocardLogic.js"></script>
+  <script src="js/threecardLogic.js"></script>  <!-- for card dragging effects -->
 </div> <!--//home-->
