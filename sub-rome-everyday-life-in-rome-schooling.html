@@ -18,19 +18,58 @@
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
+        <div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+          <div id="f1_card">
+            <div class="front face">
+              <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Latin_Calender.png">
+            </div>
+            <div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Latin_Calender.png) no-repeat;">
+              <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+              <div id="trueans" style="position:absolute;left:90px;top:180px;width:70px;height:50px;"></div>
+              <div id="falseans" style="position:absolute;left:200px;top:180px;width:70px;height:50px;"></div>
+            </div>
+          </div><!--/f1+card-->
+        </div><!--/f1_container-->
+		
+        <div id="f2_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+          <div id="f2_card">
+            <div class="front face">
+              <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Numerals_quiz.png">
+            </div>
+            <div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Numerals_quiz_Reverse.png) no-repeat;">
+              <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+				<div id="trueans1" style="position:absolute;left: 53px;top: 167px;width: 119px;height: 30px;"></div>
+				<div class="falseans1" style="position:absolute;left: 189px;top: 167px;width: 119px;height: 30px;"></div>
+				<div class="falseans1" style="position:absolute;left: 53px;top: 203px;width: 119px;height: 30px;"></div>
+				<div class="falseans1" style="position:absolute;left: 190px;top: 203px;width: 119px;height: 30px;"></div>			  
+            </div>
+          </div><!--/f1+card-->
+        </div><!--/f1_container-->
+		
+			
+			<a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Reading_Hi_Res.png', 'A Fresco detail (like a mural) of a young Roman girl reading in the 1<sup>st</sup> century CE.  (Courtesy:  Print collector/Getty Images)');">click here</a>		
 			<div id="zoomwrapper">
-
+			  <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Roman_Numerals.png" alt="" />
+			  </div>
+			  <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+				  <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Latin_Calender.png" alt="" />
+			  </div>
+			  <div id="pol3"class="pPiece" style="left:80px;top:270px;">
+				  <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Numerals_quiz.png" alt="" />
+			  </div>
+			  <div id="pol4"class="pPiece" style="left:80px;top:270px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Schooling/Reading.png" alt="" />
+			  </div>				  
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
-        <p>As Roman boys grew up, their mothers would spend money and time to advance their political careers.  Girls would receive this sort of home education too because they would be expected to teach their own children one day. </p>
- 
-		<p>Hence, education started at home.  In the Early Roman Republic there were no public schools.  In the third and second centuries BCE, very wealthy people provided Greek tutors for their children at home.  For the less wealthy there were private schools where Greek-educated slaves taught.  </p>
+		<p>As Roman boys grew up, their mothers would spend considerable money and time to advance their political careers.  Girls would receive this sort of home education, too, because they would be expected to teach their own children one day. </p>
+		 
+		<p>Hence, education started at home.  In the Early Roman Republic there were no public schools.  In the third and second centuries BCE, very wealthy people provided Greek tutors for their children at home.  For the less wealthy there were private schools where Greek-educated slaves taught. </p> 
 
 		<p>The clever Roman students often continued their studies in prestigious schools of oratory (public speaking).  Public speaking was crucial for a career as a lawyer and/or politician.</p>
-		<p>A final level of education was philosophical study, and students often went to Greece for this.  The most important philosophy in Rome was 'Stoicism', which originated in <a href="#Hellenistic" data-rel="popup">Hellenistic Greece</a>. Stoic teachings were first carried to Rome in 155 BCE by Diogenes of Babylon.  Stoic principles urged the Romans to avoid all emotional excess and dedicate themselves to public good through political activity.  
-		</p>
-
+		<p>A final level of education was philosophical study, and students often went to Greece for this.  The most important philosophy in Rome was 'Stoicism', which originated in <a href="#Hellenistic" data-rel="popup">Hellenistic Greece</a>. Stoic teachings were first carried to Rome in 155 BCE by Diogenes of Babylon.  Stoic principles urged the Romans to avoid all emotional excess and dedicate themselves to public good through political activity. </p>
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
@@ -60,10 +99,15 @@
       playing = false;
       paused = true;
 	  //Card Rotations
-      $('div#pol1').css("z-index", 2);
-      $('div#pol2').css("z-index", 1);
+      $('div#pol1').css("z-index", 3);
+      $('div#pol2').css("z-index", 2);
+      $('div#pol3').css("z-index", 1);
       $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
+      $('#watchLavaFlowholder').css({"visibility":"hidden", "z-index":-10});		
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
+      $('#watchMtTungurahuaholder').css({"visibility":"hidden", "z-index":-10});		
+      $('div#pol4 > img').css("-webkit-transform", "rotate(-3deg)");
 	  
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-Schooling').html('<audio id="Schoolingaudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Schooling.mp3" type="audio/mpeg"></audio>');
@@ -127,9 +171,66 @@
       Schoolingaudio.pause();
       //$(".audiopanel").css({"backgroundPosition":"0px 0px"});
     });
+
+    $('#falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol2").css({"visibility":"visible", "z-index":4});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol2").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });	
+
+    $('.falseans1').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans1').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard").on('tap', function() {
+      $('#f2_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f2_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f2_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f2_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol3").css({"visibility":"visible", "z-index":4});
+        $('#f2_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol3").on('tap', function() {
+      $('#f2_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f2_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f2_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f2_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f2_card').css({"transform": "rotateY(180deg)"});
+    });
+
 	
 	//Pol On click Actions
-	
+    $("#pol4").on('tap', function() {
+      $('#img1')[0].click();
+    });	
   </script>
-  <script src="js/twocardLogic.js"></script>
+  <script src="js/fourcardLogic.js"></script>  <!-- for card dragging effects -->
 </div> <!--//home-->

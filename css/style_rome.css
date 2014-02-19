@@ -42,14 +42,14 @@
   width:1024px !important;
 }
 #sub-rome-everyday-life-in-rome-household{
-  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/Household_BG.jpg') no-repeat;
+  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/Household_BG.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
 }
 
 #sub-rome-everyday-life-in-rome-roman-theatre{
-  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Theatre/Roman_Theatre_BG.jpg') no-repeat;
+  background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Theatre/Roman_Theater_BG.png') no-repeat;
   height:748px !important;
   overflow:hidden !important;
   width:1024px !important;
@@ -250,7 +250,7 @@
 }
 
 #sub-rome-rome-carthage-and-civil-war .bptitleholder{
-	width: 450px;
+	width: 665px;
 	height: 68px;
 	text-align: center;
 	line-height: 28px;
@@ -265,6 +265,7 @@
 	line-height: 28px;
 	position: absolute;
 	top: 44px;
+	left: 291px;
 }
 
 #sub-rome-everyday-life-in-rome .bptitleholder{
@@ -283,7 +284,8 @@
 	text-align: center;
 	line-height: 28px;
 	position: absolute;
-	top: 44px;
+	top: 47px;
+	left: 527px;
 }
 
 #sub-rome-everyday-life-in-rome-roman-theatre .bptitleholder{
@@ -293,6 +295,7 @@
 	line-height: 28px;
 	position: absolute;
 	top: 44px;
+	left: 528px;
 }
 /* Common Header Design h1 */
 #sub-rome .bptitleholder h1, #sub-rome-republic-and-the-roman-character .bptitleholder h1, #sub-rome-early-rome .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war .bptitleholder h1,  #sub-rome-early-rome-etruscans .bptitleholder h1,  #sub-rome-everyday-life-in-rome-food .bptitleholder h1, #sub-rome-everyday-life-in-rome-marriage .bptitleholder h1, #sub-rome-everyday-life-in-rome-roman-slavery .bptitleholder h1, #sub-rome-everyday-life-in-rome-schooling .bptitleholder h1, #sub-rome-republic-and-the-roman-character-magistrates-and-the-roman-character .bptitleholder h1, #sub-rome-republic-and-the-roman-character-the-senate .bptitleholder h1,  #sub-rome-rome-carthage-and-civil-war-civil-war-1 .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-civil-war-2 .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-hannibal-and-cannae .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war .bptitleholder h1{
@@ -305,13 +308,31 @@
 }
 
 /* Custom Page Header Design h1 */
-#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-caesar-the-provoker .bptitleholder h1,#sub-rome-everyday-life-in-rome-household .bptitleholder h1, #sub-rome-everyday-life-in-rome-roman-theatre .bptitleholder h1{
+#sub-jammin-jammin-in-the-style-of-classical .bptitleholder h1, #sub-rome-early-rome-myth-of-romulus-and-remus .bptitleholder h1, #sub-rome-republic-and-the-roman-character-rome-the-italians-and-the-greeks .bptitleholder h1, #sub-rome-rome-carthage-and-civil-war-caesar-the-provoker .bptitleholder h1{
 	text-transform: uppercase;
 	color: #FFFFFF !important;
 	font-family: "comic sans ms" !important;
 	font-weight: bold;
 	padding: 0;
 	margin: 0;	
+}
+
+#sub-rome-everyday-life-in-rome-household .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#sub-rome-everyday-life-in-rome-roman-theatre .bptitleholder h1{
+	text-transform: uppercase;
+	color: #000000 !important;
+	font-family: "comic sans ms" !important;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;		
 }
  #sub-rome-everyday-life-in-rome .bptitleholder h1{
 	text-transform: uppercase;
@@ -386,10 +407,10 @@
 }
 .navRome-RomeCarthageAndCivilWar{
 	position: absolute;
-	left: 26px;
-	top: 300px;
-	width: 973px;
-	height: 400px;
+	left: 202px;
+	top: 121px;
+	width: 657px;
+	height: 270px;
 	overflow: auto;
 	text-align: center;
 	font-family: comic sans ms;
@@ -400,10 +421,10 @@
 
 .navRome-CaesarTheProvoker{
 	position: absolute;
-	left: 26px;
-	top: 300px;
-	width: 973px;
-	height: 400px;
+	left: 181px;
+	top: 100px;
+	width: 663px;
+	height: 300px;
 	overflow: auto;
 	text-align: center;
 	font-family: comic sans ms;
@@ -427,10 +448,10 @@
 
 .navRome-Household{
 	position: absolute;
-	left: 26px;
-	top: 300px;
-	width: 973px;
-	height: 400px;
+	left: 526px;
+	top: 105px;
+	width: 460px;
+	height: 276px;
 	overflow: auto;
 	text-align: center;
 	font-family: comic sans ms;
@@ -438,6 +459,7 @@
 	font-weight: normal;
 	color: #000000;
 }
+
 .actualaudio-RomeTheItaliansAndTheGreeks{
 	position: absolute;
 	left: 26px;
@@ -454,10 +476,10 @@
 
 .navRome-RomanTheatre{
 	position: absolute;
-	left: 26px;
-	top: 300px;
-	width: 973px;
-	height: 400px;
+	left: 521px;
+	top: 97px;
+	width: 470px;
+	height: 249px;
 	overflow: auto;
 	text-align: center;
 	font-family: comic sans ms;
@@ -468,49 +490,40 @@
 
 
 			.caesar_the_provoker-btn{
-				position:absolute;
-				height:100px;
-				width:100px;
-				left:20px;
-				top:100px;
-				border:1px solid red;
-				background:#FFFFFF;
+				position: absolute;
+				height: 109px;
+				width: 205px;
+				left: 794px;
+				top: 398px;
 			}
 			.civil_war_1-btn{
-				position:absolute;
-				height:100px;
-				width:100px;
-				left:20px;
-				top:200px;
-				border:1px solid red;		
-				background:#FFFFFF;
+				position: absolute;
+				height: 100px;
+				width: 121px;
+				left: 311px;
+				top: 498px;
 			}
 			.civil_war_2-btn{
-				position:absolute;
-				height:100px;
-				width:100px;
-				left:20px;
-				top:300px;
-				border:1px solid red;				
-				background:#FFFFFF;
+				position: absolute;
+				height: 109px;
+				width: 132px;
+				left: 561px;
+				top: 438px;
 			}
 			.hannibal_and_cannae-btn{
-				position:absolute;
-				height:100px;
-				width:100px;
-				left:20px;
-				top:400px;
-				border:1px solid red;				
-				background:#FFFFFF;
+				position: absolute;
+				height: 133px;
+				width: 144px;
+				left: 22px;
+				top: 421px;
 			}
 			.moving_east-btn{
-				position:absolute;
-				height:100px;
-				width:100px;
-				left:20px;
-				top:500px;
-				border:1px solid red;				
-				background:#FFFFFF;
+				position: absolute;
+				height: 100px;
+				width: 163px;
+				left: 703px;
+				top: 510px;
+
 			}
 			
 .food-btn{
@@ -556,6 +569,216 @@
 	top: 600px;
 }
 
+/* Household */
 
+.rooms_inactive{
+}
 
-			
+.rooms_active{
+}
+
+.roomNum{
+	width:60px;
+	height:60px;
+	position:absolute;
+}
+
+.roomNumber1{
+	left: 400px;
+	top: 445px;	
+}
+
+.roomNumber1_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_1_active.png') no-repeat 0px;
+}
+
+.roomNumber2{
+	left: 223px;
+	top: 308px;
+}
+
+.roomNumber2_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_2_active.png') no-repeat 0px;
+}
+
+.roomNumber3{
+	left: 466px;
+	top: 535px;	
+}
+
+.roomNumber3_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_3_active.png') no-repeat 0px;
+}
+
+.roomNumber4{
+	left: 372px;
+	top: 486px;	
+}
+
+.roomNumber4_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_4_active.png') no-repeat 0px;
+}
+
+.roomNumber5{
+	left: 320px;
+	top: 515px;	
+}
+
+.roomNumber5_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_5_active.png') no-repeat 0px;
+}
+
+.roomNumber6{
+	left: 283px;
+	top: 485px;	
+}
+
+.roomNumber6_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_6_active.png') no-repeat 0px;
+}
+
+.roomNumber7{
+	left: 290px;
+	top: 388px;
+}
+
+.roomNumber7_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_7_active.png') no-repeat 0px;
+}
+
+.roomNumber8{
+	left: 142px;
+	top: 217px;	
+}
+
+.roomNumber8_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_8_active.png') no-repeat 0px;
+}
+
+.roomNumber9{
+	left: 500px;
+	top: 484px;
+}
+
+.roomNumber9_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_9_active.png') no-repeat 0px;
+}
+
+.roomNumber10{
+	left: 462px;
+	top: 423px;
+}
+
+.roomNumber10_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_10_active.png') no-repeat 0px;
+}
+
+.roomNumber11{
+	left: 261px;
+	top: 429px;	
+}
+
+.roomNumber11_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_11_active.png') no-repeat 0px;
+}
+
+.roomNumber12{
+	left: 148px;
+	top: 381px;
+}
+
+.roomNumber12_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_12_active.png') no-repeat 0px;
+}
+
+.roomNumber13{
+	left: 108px;
+	top: 350px;
+}
+
+.roomNumber13_img{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/s19_13_active.png') no-repeat 0px;
+}
+
+.bottomContent-household{
+	position: absolute;
+	top: 583px;
+	left: 0px;
+	width: 231px;
+	height: 100px;
+	text-align: center;
+	color: #000000;
+	font-family: comic sans ms;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.rooms_inactive{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/Rooms_Inactive.png') no-repeat 0px;
+	position: absolute;
+	top: 163px;
+	left: 30px;
+	width: 573px;
+	height: 515px;
+}
+
+.rooms_active{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/Rooms_Active.png') no-repeat 0px;
+	position: absolute;
+	top: 124px;
+	left: 0px;
+	width: 695px;
+	height: 645px;
+	display:none;
+}
+
+.showRooms{
+	position:absolute;
+	width: 100px;
+	height: 50px;
+	top: 506px;
+	left: 54px;
+}
+
+.roomNumberRomanName{
+	background:url('images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Household/Roman_Word.png') no-repeat 0px; 
+	position: absolute;
+	top: 565px;
+	left: 643px;
+	width: 290px;
+	height: 100px;
+	display:none;
+}
+
+#roomNumber_bx{
+	left: 20px;
+	top: 40px;
+	position: absolute;
+	width: 35px;
+	height: 30px;
+	text-align: center;
+	margin-top: 3px;
+	color: #ffffff;
+	font-family: comic sans ms;
+	font-size: 16px;
+}
+
+#roomRomanName_bx{
+	position: absolute;
+	top: 40px;
+	left: 105px;
+	width: 125px;
+	height: 33px;
+	margin-top: 3px;
+	color: #ffffff;
+	font-family: comic sans ms;
+	font-size: 16px;
+}
+
+#roomNumberRomanName_close{
+	position: absolute;
+	top: 62px;
+	left: 253px;
+	width: 30px;
+	height: 30px;
+}

@@ -18,18 +18,26 @@
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
+			<a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Civil_War_II/Julius_Caesar_Hi_Res.png', 'This image shows Julius Caesar as he crosses the Rubicon river to begin a civil war against Pompey in 49 BCE.  (Courtesy:  North Wind Picture Archives/Alamy)');">click here</a>	
+			<a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Civil_War_II/Ancient_Greek_Warriors_Hi_Res.png', 'Ancient Greek warriors depicted in a 19<sup>th </sup>century woodwork.  These are hopolites, the term for citizen-soldiers from Ancient Greece.');">click here</a>		
 			<div id="zoomwrapper">
-
-			</div><!--/zoomwrapper-->			
+				<div id="pol1" class="pPiece" style="left:100px;top:270px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Civil_War_II/Caesar_And_Cleopatra.png" alt="" />
+				</div>
+				<div id="pol2" class="pPiece" style="left:75px;top:290px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Civil_War_II/Julius_Caesar.png" alt="" />
+				</div>
+				<div id="pol3" class="pPiece" style="left:80px;top:270px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Civil_War_II/Ancient_Greek_Warriors.png" alt="" />
+				</div>
+			</div><!-- zoomwrapper -->			
 		</div>
       <div class="bpcontentRome">
-        <p>At times Rome was a confusing place  a lot of plotting went on, and people seemed to be always changing sides!</p>  
+		<p>At times Rome was a confusing place  a lot of plotting went on, and people seemed to be always changing sides!</p>
 
-		<p>During the war against Jugurtha, king of Numidia, in 111 BCE, Gaius Marius became very well known.  But it was Mariuss lieutenant, <a href="#Sulla" data-rel="popup"> Sulla</a>, who defeated Jugurtha for good.  The rivalry between these two men resulted in civil war in 88 BCE.  Marius recruited into his army poor people, promising to give them land.  But Sulla beat Marius and the Senate, fearful of an angry population, appointed Sulla dictator for life.  Sulla used his army to destroy his opponents through the 'proscriptions'.</p>  
+		<p>During the war against Jugurtha, king of Numidia, in 111 BCE, Gaius Marius became very well known.  But it was Mariuss lieutenant, <a href="#Sulla" data-rel="popup"> Sulla</a>, who defeated Jugurtha for good.  The rivalry between these two men resulted in civil war in 88 BCE.  Marius recruited into his army poor people, promising to give them land.  But Sulla beat Marius and the Senate, fearful of an angry population, appointed Sulla dictator for life.  Sulla used his army to destroy his opponents through the 'proscriptions'.</p>
 
-		<p>A few years later Pompey and Crassus were elected consuls.  As Pompey grew popular, Crassus got together with some other popular leaders.  The most popular of became friendly with Gaius Julius Caesar.  Caesar convinced Pompey and Crassus to reconcile, and the three of them formed the 'First Triumvirate' or secret political alliance.  Then, when Crassus died in a battle against the Parthians, Pompey and Caesar headed for civil war!</p>
-
-		
+		<p>A few years later Pompey and Crassus were elected consuls.  As Pompey grew popular, Crassus became friendly with Gaius Julius Caesar who was very popular with the plebeians.  The most popular of became friendly with Gaius Julius Caesar.  Caesar convinced Pompey and Crassus to reconcile, and the three of them formed the 'First Triumvirate' or secret political alliance.  Then, when Crassus died in a battle against the Parthians, Pompey and Caesar headed for civil war!</p>
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
@@ -39,7 +47,7 @@
 	<div data-role="popup" id="Sulla" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
 		<div id="node-pop">
 			<p>Sulla</p>
-			<p>Sulla asked the Senate and the romans to identify to the authorities those considered as enemies of the state.  Named individuals were stripped of their civic rights and were executed immediately.  The informers received financial rewards and/or parts of the proscribed men's estate.  Often people were accused falsely so that the informers could get hold of their property.</p>
+			<p>Sula asked the Senate and the romans to identify to the authorities those considered as enemies of the state.  Named individuals were stripped of their civic rights and were executed immediately.  The informers received financial rewards and/or parts of the proscribed men's estate.  Often people were accused falsely so that the informers could get hold of their property.</p>
 		</div>
     </div>
 	<!---------------------------------------------------------------------------------------- -->       
@@ -60,10 +68,11 @@
       playing = false;
       paused = true;
 	  //Card Rotations
-      $('div#pol1').css("z-index", 2);
-      $('div#pol2').css("z-index", 1);
+      $('div#pol2').css("z-index", 2);
+      $('div#pol1').css("z-index", 1);
       $('div#pol1 > img').css("-webkit-transform", "rotate(0deg)");
-      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
+      $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");
+      $('div#pol3 > img').css("-webkit-transform", "rotate(-3deg)");
 	  
       if(sound.canPlayType('audio/mpeg')) {
         $('#actualaudio-CivilWar2').html('<audio id="CivilWar2audio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Civil_War_2.mp3" type="audio/mpeg"></audio>');
@@ -130,6 +139,12 @@
 	
 	//Pol On click Actions
 	
+    $("#pol2").on('tap', function() {
+      $('#img1')[0].click();
+    });
+    $("#pol3").on('tap', function() {
+      $('#img2')[0].click();
+    });		
   </script>
-  <script src="js/twocardLogic.js"></script>
+  <script src="js/threecardLogic.js"></script>
 </div> <!--//home-->

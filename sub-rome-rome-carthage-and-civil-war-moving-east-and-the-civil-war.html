@@ -17,16 +17,40 @@
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
+			<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+			  <div id="f1_card">
+				<div class="front face">
+				  <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Expansion.png">
+				</div>
+				<div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Expansion.png) no-repeat;">
+				  <div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+				  <div id="trueans" style="position:absolute;left:90px;top:180px;width:70px;height:50px;"></div>
+				  <div class="falseans" style="position:absolute;left:200px;top:180px;width:70px;height:50px;"></div>
+				</div>
+			  </div><!--/f1+card-->
+			</div><!--/f1_container-->
+			
+			<a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Alexandra_The_Great_Hi_Res.png', '');">click here</a>
+			
+			<a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Pompeii_Mosaic_Hi_Res.png', '');">click here</a>	
+		
 		<div class="sidebarleft-half">
 			<div id="zoomwrapper">
-
+				<div id="pol1" class="pPiece" style="left:100px;top:270px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Expansion.png" alt="" />
+				</div>
+				<div id="pol2" class="pPiece" style="left:75px;top:290px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Alexandra_The_Great.png" alt="" />
+				</div>
+				<div id="pol3" class="pPiece" style="left:75px;top:290px;">
+					<img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Moving_East_And_The_Civil_War/Pompeii_mosaic.png" alt="" />
+				</div>				
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
-        <p>By 324 BCE, the world east of Rome was controlled by Alexander the Great.  After his death, his generals and successors fought relentlessly with each other: when Philip V of Macedon and Antiochus III decided to go against Ptolemy in Egypt, the Romans intervened.  Philip V was an enemy of Rome but Rome had good friends in the Attalids of Pergamon (their kingdom was located in central Asia Minor).  The Roman general Flamininus defeated Philip and, in 196 BCE, declared all the Greek cities to be free. </p>
+		<p>By 324 BCE, the world east of Rome was controlled by Alexander the Great.  After his death, his generals and successors fought relentlessly with each other: when Philip V of Macedon and Antiochus III decided to go against Ptolemy in Egypt, the Romans intervened.  Philip V was an enemy of Rome but Rome had good friends in the Attalids of Pergamon (their kingdom was located in central Asia Minor).  The Roman general Flamininus defeated Philip and, in 196 BCE, declared all the Greek cities to be free.</p> 
 
 		<p>After Philip V came Perseus, who roused up democratic passions in Greece.  So, Rome invaded Greece again.  The Romans didn't seize any territory, but they did impose tough regulations on the Greek cities.  In 133 BCE, Attalus III <a href="#bequeathed" data-rel="popup">bequeathed</a> his kingdom to the Romans, firmly giving them a place in the politics of the East.  By then Romans had realised that expansion to the East was a vast money-making machine and empire-building was fabulously lucrative!  The massive wealth that was created for Rome awoke old tensions between rich and poor, and the Republic lived in a state of crisis for over 100 years.</p>
-		
       </div>       
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
@@ -62,7 +86,7 @@
       $('div#pol2 > img').css("-webkit-transform", "rotate(5deg)");	  
 	  
       if(sound.canPlayType('audio/mpeg')) {
-        $('#actualaudio-MovingEastAndTheCivilWar').html('<audio id="MovingEastAndTheCivilWaraudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Hannibal_And_Canne.mp3" type="audio/mpeg"></audio>');
+        $('#actualaudio-MovingEastAndTheCivilWar').html('<audio id="MovingEastAndTheCivilWaraudio" controls preload onpause="playsRome()" onplay="pauseRome()"><source src="audio/Rome/Moving_East_And_The_Civil_War.mp3" type="audio/mpeg"></audio>');
       } 
     
       $("#sub-rome-rome-carthage-and-civil-war-moving-east-and-the-civil-war").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
@@ -125,7 +149,38 @@
     });
 	
 	//Pol On click Actions
-	
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+      setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":4});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol1").on('tap', function() {
+      $('#f1_container').css({"visibility":"visible", "z-index":10});
+      $(this).css({"visibility":"hidden"});
+      $('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+      $('#f1_card').css({"transform": "rotateY(180deg)"});
+    });
+    $("#pol2").on('tap', function() {
+      $('#img1')[0].click();
+    });
+    $("#pol3").on('tap', function() {
+      $('#img2')[0].click();
+    });	
   </script>
-  <script src="js/twocardLogic.js"></script>
+  <script src="js/threecardLogic.js"></script>
 </div> <!--//home-->

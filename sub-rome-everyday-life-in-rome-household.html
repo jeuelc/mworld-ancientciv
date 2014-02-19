@@ -13,17 +13,38 @@
   
   <div class="bptitleholder" style="padding-top:14px;"><h1>Household</h1></div>
   
+  <!-- Custom div -->
+  <div class="rooms_inactive" id="roomsInactive_bx"></div>
+  <div class="rooms_active" id="roomsActive_bx"></div>
+  <div class="roomNumber1 roomNum"></div>
+  <div class="roomNumber2 roomNum"></div>
+  <div class="roomNumber3 roomNum"></div>
+  <div class="roomNumber4 roomNum"></div>
+  <div class="roomNumber5 roomNum"></div>
+  <div class="roomNumber6 roomNum"></div>
+  <div class="roomNumber7 roomNum"></div>
+  <div class="roomNumber8 roomNum"></div>
+  <div class="roomNumber9 roomNum"></div>
+  <div class="roomNumber10 roomNum"></div>
+  <div class="roomNumber11 roomNum"></div>
+  <div class="roomNumber12 roomNum"></div>
+  <div class="roomNumber13 roomNum"></div>
+  <div class="showRooms"></div>
+  <div class="roomNumberRomanName"><div id="roomNumber_bx"></div><div id="roomRomanName_bx"></div><div id="roomNumberRomanName_close"></div></div>
+  
     <div data-role="content" class="kidzcontent">
       <div class="navRome-Household">
 			<p>The head of the Roman family was the 'pater familias'.  </p>
-
 			<p>He was the boss!  He had absolute power over his children and descendants.  But however rigid this authority was theoretically, it was greatly modified in practice.  This happened under the Republic by custom and under the Empire by law. 
 			The head of the house usually assigned to his children property, 'peclium' (which directly translated means 'property in cattle'), for them to manage for their own benefit.  And although the 'pater familis' theoretically owned all their <a href="#acquisitions" data-rel="popup">acquisitions</a>, in practice he was their trustee, helping them to manage them.</p>
-			  
 			<p>In marrying, the wife was separated entirely from her father's family and passed into her husband's power or 'hand' ('conventi in manum').  Have you ever heard the expression asking for someones hand in marriage?  This is where it comes from!</p>
       </div>
 	        <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
+	
+	<div class="bottomContent-household">
+		Tap the top button to reveal the rooms with an aristocratic house, then tap each room number to reveal its Roman name.
+	</div>
   	<!------------------------------------- Definition box ----------------------------------- -->
 	<div data-role="popup" id="acquisitions" data-position-to="window" data-overlay-theme="a" style="text-align:center;">
 		<div id="node-pop">
@@ -55,6 +76,139 @@
       $("#sub-rome-everyday-life-in-rome-household").swipe( { swipeRight:goBack, allowPageScroll:"auto"} );
     })();
     
+	$(document).ready(function(){
+		$('.showRooms').on('tap', function(){
+			$('.showRooms').hide();
+			$('#roomsActive_bx').show();
+		});
+	});
+		
+	$('.roomNumber1').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber1').removeAttr('style');
+		$('.roomNumber1').addClass('roomNumber1_img');
+		showRomanName();
+		$('#roomNumber_bx').text('1.');
+		$('#roomRomanName_bx').text('Atrium');
+	});
+	
+	$('.roomNumber2').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber2').removeAttr('style');
+		$('.roomNumber2').addClass('roomNumber2_img');
+		showRomanName();
+		$('#roomNumber_bx').text('2.');
+		$('#roomRomanName_bx').text('Peristylium');
+	});
+	
+	$('.roomNumber3').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber3').removeAttr('style');
+		$('.roomNumber3').addClass('roomNumber3_img');
+		showRomanName();
+		$('#roomNumber_bx').text('3.');
+		$('#roomRomanName_bx').text('Vestibulum');
+	});
+	
+	$('.roomNumber4').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber4').removeAttr('style');
+		$('.roomNumber4').addClass('roomNumber4_img');
+		showRomanName();
+		$('#roomNumber_bx').text('4.');
+		$('#roomRomanName_bx').text('Impluvium');
+	});
+	
+	$('.roomNumber5').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber5').removeAttr('style');
+		$('.roomNumber5').addClass('roomNumber5_img');
+		showRomanName();
+		$('#roomNumber_bx').text('5.');
+		$('#roomRomanName_bx').text('Ala');
+	});
+	
+	$('.roomNumber6').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber6').removeAttr('style');
+		$('.roomNumber6').addClass('roomNumber6_img');
+		showRomanName();
+		$('#roomNumber_bx').text('6.');
+		$('#roomRomanName_bx').text('Trielinium');
+	});
+	
+	$('.roomNumber7').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber7').removeAttr('style');
+		$('.roomNumber7').addClass('roomNumber7_img');
+		showRomanName();
+		$('#roomNumber_bx').text('7.');
+		$('#roomRomanName_bx').text('Tablinium');
+	});
+	
+	$('.roomNumber8').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber8').removeAttr('style');
+		$('.roomNumber8').addClass('roomNumber8_img');
+		showRomanName();
+		$('#roomNumber_bx').text('8.');
+		$('#roomRomanName_bx').text('Exhendra/Oecus');
+	});
+	
+	$('.roomNumber9').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber9').removeAttr('style');
+		$('.roomNumber9').addClass('roomNumber9_img');
+		showRomanName();
+		$('#roomNumber_bx').text('9.');
+		$('#roomRomanName_bx').text('Taberna');
+	});
+	
+	$('.roomNumber10').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber10').removeAttr('style');
+		$('.roomNumber10').addClass('roomNumber10_img');
+		showRomanName();
+		$('#roomNumber_bx').text('10.');
+		$('#roomRomanName_bx').text('Cubiculum');
+	});
+	
+	$('.roomNumber11').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber11').removeAttr('style');
+		$('.roomNumber11').addClass('roomNumber11_img');
+		showRomanName();
+		$('#roomNumber_bx').text('11.');
+		$('#roomRomanName_bx').text('Andron');
+	});
+	
+	$('.roomNumber12').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber12').removeAttr('style');
+		$('.roomNumber12').addClass('roomNumber12_img');
+		showRomanName();
+		$('#roomNumber_bx').text('12.');
+		$('#roomRomanName_bx').text('Bathroom');
+	});
+	
+	$('.roomNumber13').on('tap', function(){
+		$('.roomNum').css('background','none');
+		$('.roomNumber13').removeAttr('style');
+		$('.roomNumber13').addClass('roomNumber13_img');
+		showRomanName();
+		$('#roomNumber_bx').text('13.');
+		$('#roomRomanName_bx').text('Cucina');
+	});
+	
+	$('#roomNumberRomanName_close').on('tap', function(){
+		$('.roomNumberRomanName').hide();
+		$('.roomNum').css('background','none');
+	});
+	
+	function showRomanName(){
+		$('.roomNumberRomanName').show();
+	}
+	
     $('.homelinkbh').on('tap', function() { bgsoundRome.pause(); bgsoundRome.currentTime = 0; mainaudiobg.play(); });
     
     function goBack() {

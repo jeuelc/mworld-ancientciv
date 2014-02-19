@@ -17,9 +17,16 @@
   <div id="spacechar">&nbsp;
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
+        <a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Slavery/Domestic_Slaves_Hi_Res.png', 'A mosaic of domestic slaves preparing a feast in Carthage, 2<sup>nd</sup> century BCE.  Now located in the Louvre museum, Paris.  (Courtesy:  Print Collector/Getty Images)');">click here</a>
+        <a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Slavery/Banqueting_Hi_Res.png', 'A fresco of a banqueting couple being served by a slave, from Herculaneum, Italy, 1<sup>st </sup>century CE.  (Courtesy:  The Bridgeman Art Library/Getty Images)');">click here</a>		
 		<div class="sidebarleft-half">
 			<div id="zoomwrapper">
-
+				  <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+					 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Slavery/Domestic_Slaves.png" alt="" />
+				  </div>
+				  <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+					 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Roman_Slavery/Banqueting.png" alt="" />
+				  </div>
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
@@ -120,7 +127,13 @@
     });
 	
 	//Pol On click Actions
-	
+	//Pol On click Actions
+    $("#pol1").on('tap', function() {
+      $('#img1')[0].click();
+    });
+    $("#pol2").on('tap', function() {
+      $('#img2')[0].click();
+    }); 		
   </script>
   <script src="js/twocardLogic.js"></script>
 </div> <!--//home-->

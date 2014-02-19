@@ -18,8 +18,15 @@
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
+			<a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Marriage/Celebration_Of_Marriage_Hi_Reas.png', 'A Roman marble sarcophagus depicting marriage celebrations in the Latium region of Rome.  (Courtesy:  De Agostini/Getty Images)');">click here</a>
+			<a id="img2" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Marriage/The_Marriage_Of_Dionysus_Hi_Res.png', 'A Roman sarcophagus (coffin), from 140 CE depicting the marriage of Dionysus and Ariadne.   (Courtesy:  Prisma Archivo / Alamy)');">click here</a>		
 			<div id="zoomwrapper">
-
+				  <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+					 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Marriage/Celebration_Of_Marriage.png" alt="" />
+				  </div>
+				  <div id="pol2"class="pPiece" style="left:75px;top:290px;">
+					 <img src="css/images/9-12/Ancient_Civilizations/Rome/Everyday_Life_In_Rome/Marriage/The_Marriage_Of_Dionysus.png" alt="" />
+				  </div>
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
@@ -127,7 +134,12 @@
     });
 	
 	//Pol On click Actions
-	
+    $("#pol1").on('tap', function() {
+      $('#img1')[0].click();
+    });
+    $("#pol2").on('tap', function() {
+      $('#img2')[0].click();
+    }); 	
   </script>
   <script src="js/twocardLogic.js"></script>
 </div> <!--//home-->

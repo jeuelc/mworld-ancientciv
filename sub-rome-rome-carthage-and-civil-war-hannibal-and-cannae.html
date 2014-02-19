@@ -15,20 +15,38 @@
   
   <div class="bptitleholder" style="padding-top:14px;"><h1>Hannibal and Cannae</h1></div>
   <div id="spacechar">&nbsp;
+	<div id="f1_container" style="visibility:hidden;position:absolute;left:100px;top:270px;">
+	  <div id="f1_card">
+		<div class="front face">
+		  <img id="dopple" src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Hannibal_And_Cannae/Hannibal_army.png">
+		</div>
+		<div id="backofcard" class="back face center" style="background:url(css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Hannibal_And_Cannae/Hannibal_army_Reverse.png) no-repeat;">
+			<div class="returncard" style="position:absolute;left:0px;top:0px;width:362px;height:170px;"></div>
+			<div id="trueans" style="position:absolute;left: 53px;top: 167px;width: 119px;height: 30px;"></div>
+			<div class="falseans" style="position:absolute;left: 189px;top: 167px;width: 119px;height: 30px;"></div>
+			<div class="falseans" style="position:absolute;left: 53px;top: 203px;width: 119px;height: 30px;"></div>
+			<div class="falseans" style="position:absolute;left: 190px;top: 203px;width: 119px;height: 30px;"></div>	
+		</div>
+	  </div><!--/f1+card-->
+	</div><!--/f1_container-->  
+	<a id="img1" style="visibility:hidden;" href="JavaScript:html5Lightbox.showLightbox(0, 'css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Hannibal_And_Cannae/Hannibal_and_Cannae_Hi_Res.png', 'An image of Hannibal and his army crossing the Alps with elephants during the Second Punic War.  The image is from Rome\'s Palazzo dei Conservatori museum.  (Courtesy:  Print Collector/Getty Images)');">click here</a>	
     <div data-role="content" class="kidzcontent">
 		<div class="v-spacer"></div>
 		<div class="sidebarleft-half">
 			<div id="zoomwrapper">
-
+			  <div id="pol1" class="pPiece" style="left:100px;top:270px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Hannibal_And_Cannae/Hannibal_army.png" alt="" />
+			  </div>
+			  <div id="pol2" class="pPiece" style="left:75px;top:290px;">
+				 <img src="css/images/9-12/Ancient_Civilizations/Rome/Rome_Carthage_And_Civil_War/Hannibal_And_Cannae/Hannibal_and_Cannae.png" alt="" />
+			  </div>
 			</div><!--/zoomwrapper-->			
 		</div>
       <div class="bpcontentRome">
         <p>Hannibal was the greatest Carthaginian general, a brilliant military planner and commander.  During the Second Punic War he marched a whole army  which included elephants!  from Spain over the Pyrenees and the Alps into Italy. </p>
-
 		<p>He won a huge victory against the Romans at Cannae in 216 BCE.  Hannibal managed to surround 85,000 Roman soldiers with an army half the size!  The Romans had no chance.  According to the writer Livy, 48,200 Romans were killed and another 20,000 captured before nightfall put a stop to the slaughter.  Polybius, a historian of the second century BCE, puts the number of dead at 70,000. </p>
-
 		<p>Hannibal won all his battles, but lost the war when the Roman general Scipio attacked Carthage and Hannibal had to go home.  After the war, Hannibal became a 'suffete' (a judge) and through his reforms tried to raise the war indemnities that Rome demanded.  However, these were unpopular and Hannibal fled to the Court of the Macedonian king Antiochus III in Syria.  Hannibal (born in 247 BCE) committed suicide in Bithynia (an ancient kingdom on the Black Sea) at the age of about 64 after being betrayed to the Romans.</p>
-      </div>       
+      </div>
       <div class="botlogoholder"><a href="home.html" class="homelinkbh"><img src="css/images/9-12/Ancient_Civilizations/bottomhomeac.png"></a></div>
     </div> <!-- end content -->  
  </div><!--/spacechar-->      
@@ -118,6 +136,36 @@
     });
 	
 	//Pol On click Actions
+    $('.falseans').on('tap', function() {
+      alert("Wrong answer");
+    });
+    $('#trueans').on('tap', function() {
+      alert("Correct answer");
+    });
+    
+    $(".returncard").on('tap', function() {
+      $('#f1_card').css({"-webkit-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-moz-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"-o-transform": "rotateY(0deg)"});
+      $('#f1_card').css({"transform": "rotateY(0deg)"});
+		setTimeout(function() {
+        $("#pol1").css({"visibility":"visible", "z-index":4});
+        $('#f1_container').css({"visibility":"hidden", "z-index":0});
+      }, 1000);
+    });
+    
+    $("#pol1").on('tap', function() {
+		$('#f1_container').css({"visibility":"visible", "z-index":10});
+		$(this).css({"visibility":"hidden"});
+		$('#f1_card').css({"-webkit-transform": "rotateY(180deg)"});
+		$('#f1_card').css({"-moz-transform": "rotateY(180deg)"});
+		$('#f1_card').css({"-o-transform": "rotateY(180deg)"});
+		$('#f1_card').css({"transform": "rotateY(180deg)"});
+    });
+	
+    $("#pol2").on('tap', function() {
+      $('#img1')[0].click();
+    });
 	
   </script>
   <script src="js/twocardLogic.js"></script>
